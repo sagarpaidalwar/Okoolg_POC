@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="example suite 1" verbose="1" >
+<test name="Test1" >
+<classes>
+<class name="com.atmecs.glucko.testscripts.AddFoodMedicine"/>
+</classes>
+</test>
+<test name="Test2" >
+<classes>
+<class name="com.atmecs.glucko.testscripts.TestScript1"/>
+</classes>
+</test>
+<test name="Test3" >
+<classes>
+<class name="com.atmecs.glucko.testscripts.TestScript2"/>
+</classes>
+</test>
+</suite>

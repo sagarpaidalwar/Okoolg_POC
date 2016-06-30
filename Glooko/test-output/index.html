@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-example_suite_1">
+              <span class="suite-name border-failed">example suite 1</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-example_suite_1">
+                    <span>D:\New folder (5)\Glooko\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-example_suite_1">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-example_suite_1">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-example_suite_1">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-example_suite_1">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-example_suite_1">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-example_suite_1">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-example_suite_1" class="hide-methods failed suite-example_suite_1"> (hide)</a> <!-- hide-methods failed suite-example_suite_1 -->
+                      <a href="#" panel-name="suite-example_suite_1" class="show-methods failed suite-example_suite_1"> (show)</a> <!-- show-methods failed suite-example_suite_1 -->
+                    </span>
+                    <div class="method-list-content failed suite-example_suite_1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-example_suite_1" title="com.atmecs.glucko.testscripts.AddFoodMedicine" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-example_suite_1 -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-example_suite_1" class="hide-methods passed suite-example_suite_1"> (hide)</a> <!-- hide-methods passed suite-example_suite_1 -->
+                      <a href="#" panel-name="suite-example_suite_1" class="show-methods passed suite-example_suite_1"> (show)</a> <!-- show-methods passed suite-example_suite_1 -->
+                    </span>
+                    <div class="method-list-content passed suite-example_suite_1">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-example_suite_1" title="com.atmecs.glucko.testscripts.TestScript1" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-example_suite_1" title="com.atmecs.glucko.testscripts.TestScript2" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-example_suite_1 -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-example_suite_1" class="panel example_suite_1">
+          <div class="suite-example_suite_1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.atmecs.glucko.testscripts.AddFoodMedicine</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 535 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;ATMECSINDT-050&apos;, ip: &apos;10.11.20.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.glooko.logbook, noReset=true, dontStopAppOnReset=null, language=null, locale=null, deviceName=192.168.56.101:5555, fullReset=false, platform=LINUX, desired={app=null, appPackage=com.glooko.logbook, orientation=null, noReset=true, dontStopAppOnReset=null, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, language=null, locale=null, deviceName=Android, launchTimeout=null, fullReset=false, appActivity=com.glooko.logbook.activity.FtueActivity, newCommandTimeout=60*5, platformVersion=5.X, browserName=, platformName=Android}, newCommandTimeout=60*5, platformVersion=5.1, webStorageEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android, app=null, networkConnectionEnabled=true, orientation=null, warnings={}, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, databaseEnabled=false, launchTimeout=null, appActivity=com.glooko.logbook.activity.FtueActivity, locationContextEnabled=false}]
+Session ID: 09d50cf7-e941-46b5-800f-616bc1534c6e
+*** Element info: {Using=id, value=com.glooko.logbook:id/note_food_field}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at com.atmecs.glucko.testfunction.AddNoteForCurrentDay.addNoteForCurrentDate(AddNoteForCurrentDay.java:31)
+	at com.atmecs.glucko.testscripts.AddFoodMedicine.test(AddFoodMedicine.java:69)
+	at com.atmecs.falcon.automation.appium.executor.MyTestExecutor.runMethodParallel(MyTestExecutor.java:312)
+	at com.atmecs.falcon.automation.appium.executor.MyTestExecutor.runMethodParallelAppium(MyTestExecutor.java:369)
+	at com.atmecs.falcon.automation.appium.manager.ParallelThread.runner(ParallelThread.java:202)
+	at com.atmecs.falcon.automation.appium.manager.Runner.testApp(Runner.java:17)
+	at com.atmecs.glucko.runner.TestNGRunner.main(TestNGRunner.java:60)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-example_suite_1-class-failed -->
+          <div class="suite-example_suite_1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.atmecs.glucko.testscripts.TestScript2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-example_suite_1-class-passed -->
+          <div class="suite-example_suite_1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.atmecs.glucko.testscripts.TestScript1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-example_suite_1-class-passed -->
+        </div> <!-- panel example_suite_1 -->
+        <div panel-name="test-xml-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\New folder (5)\Glooko\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;example suite 1&quot;&gt;
+  &lt;test name=&quot;Test1&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.atmecs.glucko.testscripts.AddFoodMedicine&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test name=&quot;Test2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.atmecs.glucko.testscripts.TestScript1&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
+  &lt;test name=&quot;Test3&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.atmecs.glucko.testscripts.TestScript2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test3 --&gt;
+&lt;/suite&gt; &lt;!-- example suite 1 --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for example suite 1</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test3 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for example suite 1</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for example suite 1</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_example_suite_1');
+function tableData_example_suite_1() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(3);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'test')
+data.setCell(0, 2, 'com.atmecs.glucko.testscripts.AddFoodMedicine')
+data.setCell(0, 3, 3204);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'test')
+data.setCell(1, 2, 'com.atmecs.glucko.testscripts.TestScript1')
+data.setCell(1, 3, 1);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test')
+data.setCell(2, 2, 'com.atmecs.glucko.testscripts.TestScript2')
+data.setCell(2, 3, 1);
+window.suiteTableData['example_suite_1']= { tableData: data, tableDiv: 'times-div-example_suite_1'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <div id="times-div-example_suite_1">
+              </div> <!-- times-div-example_suite_1 -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for example suite 1</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-example_suite_1" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.atmecs.glucko.testscripts.AddFoodMedicine</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">273 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startApp(public void com.atmecs.glucko.testscripts.AddFoodMedicine.test() throws java.io.IOException,java.lan...)</span>
+                <span class="method-start">9306 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test</span>
+                <span class="method-start">19366 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">killServer([TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=FAILURE method=AddFood...)</span>
+                <span class="method-start">22570 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">28327 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">28748 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.atmecs.glucko.testscripts.TestScript1</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">28791 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">28791 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startApp(public void com.atmecs.glucko.testscripts.TestScript1.test())</span>
+                <span class="method-start">37012 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">46175 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">killServer([TestResult name=test on [TestScript1 passed=0 failed=0 skipped=0] status=SUCCESS method=TestScript1...)</span>
+                <span class="method-start">46176 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">47196 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">47608 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.atmecs.glucko.testscripts.TestScript2</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">47620 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">47620 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startApp(public void com.atmecs.glucko.testscripts.TestScript2.test())</span>
+                <span class="method-start">56211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">64658 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">killServer([TestResult name=test on [TestScript2 passed=0 failed=0 skipped=0] status=SUCCESS method=TestScript2...)</span>
+                <span class="method-start">64659 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">65554 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">66000 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

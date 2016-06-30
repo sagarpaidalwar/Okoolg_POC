@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="example suite 1" duration-ms="66001" started-at="2016-06-30T09:58:46Z" finished-at="2016-06-30T09:59:52Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="28749" started-at="2016-06-30T09:58:46Z" finished-at="2016-06-30T09:59:15Z">
+      <class name="com.atmecs.glucko.testscripts.AddFoodMedicine">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="269" started-at="2016-06-30T15:28:46Z" finished-at="2016-06-30T15:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="9027" started-at="2016-06-30T15:28:47Z" finished-at="2016-06-30T15:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="10060" started-at="2016-06-30T15:28:56Z" finished-at="2016-06-30T15:29:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.atmecs.glucko.testscripts.AddFoodMedicine.test() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method status="FAIL" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="3204" started-at="2016-06-30T15:29:06Z" finished-at="2016-06-30T15:29:09Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 535 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'ATMECSINDT-050', ip: '10.11.20.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.glooko.logbook, noReset=true, dontStopAppOnReset=null, language=null, locale=null, deviceName=192.168.56.101:5555, fullReset=false, platform=LINUX, desired={app=null, appPackage=com.glooko.logbook, orientation=null, noReset=true, dontStopAppOnReset=null, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, language=null, locale=null, deviceName=Android, launchTimeout=null, fullReset=false, appActivity=com.glooko.logbook.activity.FtueActivity, newCommandTimeout=60*5, platformVersion=5.X, browserName=, platformName=Android}, newCommandTimeout=60*5, platformVersion=5.1, webStorageEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android, app=null, networkConnectionEnabled=true, orientation=null, warnings={}, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, databaseEnabled=false, launchTimeout=null, appActivity=com.glooko.logbook.activity.FtueActivity, locationContextEnabled=false}]
+Session ID: 09d50cf7-e941-46b5-800f-616bc1534c6e
+*** Element info: {Using=id, value=com.glooko.logbook:id/note_food_field}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 535 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'ATMECSINDT-050', ip: '10.11.20.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.glooko.logbook, noReset=true, dontStopAppOnReset=null, language=null, locale=null, deviceName=192.168.56.101:5555, fullReset=false, platform=LINUX, desired={app=null, appPackage=com.glooko.logbook, orientation=null, noReset=true, dontStopAppOnReset=null, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, language=null, locale=null, deviceName=Android, launchTimeout=null, fullReset=false, appActivity=com.glooko.logbook.activity.FtueActivity, newCommandTimeout=60*5, platformVersion=5.X, browserName=, platformName=Android}, newCommandTimeout=60*5, platformVersion=5.1, webStorageEnabled=false, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=Android, app=null, networkConnectionEnabled=true, orientation=null, warnings={}, appiumVersion=null, appWaitPackage=null, appWaitActivity=null, databaseEnabled=false, launchTimeout=null, appActivity=com.glooko.logbook.activity.FtueActivity, locationContextEnabled=false}]
+Session ID: 09d50cf7-e941-46b5-800f-616bc1534c6e
+*** Element info: {Using=id, value=com.glooko.logbook:id/note_food_field}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at com.atmecs.glucko.testfunction.AddNoteForCurrentDay.addNoteForCurrentDate(AddNoteForCurrentDay.java:31)
+	at com.atmecs.glucko.testscripts.AddFoodMedicine.test(AddFoodMedicine.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at com.atmecs.falcon.automation.appium.executor.MyTestExecutor.runMethodParallel(MyTestExecutor.java:312)
+	at com.atmecs.falcon.automation.appium.executor.MyTestExecutor.runMethodParallelAppium(MyTestExecutor.java:369)
+	at com.atmecs.falcon.automation.appium.manager.ParallelThread.runner(ParallelThread.java:202)
+	at com.atmecs.falcon.automation.appium.manager.Runner.testApp(Runner.java:17)
+	at com.atmecs.glucko.runner.TestNGRunner.main(TestNGRunner.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="5756" started-at="2016-06-30T15:29:09Z" finished-at="2016-06-30T15:29:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=FAILURE method=AddFoodMedicine.test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killServer -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="419" started-at="2016-06-30T15:29:15Z" finished-at="2016-06-30T15:29:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-06-30T15:29:15Z" finished-at="2016-06-30T15:29:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.atmecs.glucko.testscripts.AddFoodMedicine -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="18817" started-at="2016-06-30T09:59:15Z" finished-at="2016-06-30T09:59:34Z">
+      <class name="com.atmecs.glucko.testscripts.TestScript1">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8220" started-at="2016-06-30T15:29:15Z" finished-at="2016-06-30T15:29:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-06-30T15:29:15Z" finished-at="2016-06-30T15:29:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="9163" started-at="2016-06-30T15:29:23Z" finished-at="2016-06-30T15:29:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.atmecs.glucko.testscripts.TestScript1.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method status="PASS" signature="test()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="test" duration-ms="1" started-at="2016-06-30T15:29:32Z" finished-at="2016-06-30T15:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1020" started-at="2016-06-30T15:29:32Z" finished-at="2016-06-30T15:29:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test on [TestScript1 passed=0 failed=0 skipped=0] status=SUCCESS method=TestScript1.test()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killServer -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="412" started-at="2016-06-30T15:29:33Z" finished-at="2016-06-30T15:29:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-06-30T15:29:34Z" finished-at="2016-06-30T15:29:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.atmecs.glucko.testscripts.TestScript1 -->
+    </test> <!-- Test2 -->
+    <test name="Test3" duration-ms="18380" started-at="2016-06-30T09:59:34Z" finished-at="2016-06-30T09:59:52Z">
+      <class name="com.atmecs.glucko.testscripts.TestScript2">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8590" started-at="2016-06-30T15:29:34Z" finished-at="2016-06-30T15:29:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-06-30T15:29:34Z" finished-at="2016-06-30T15:29:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="8447" started-at="2016-06-30T15:29:42Z" finished-at="2016-06-30T15:29:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.atmecs.glucko.testscripts.TestScript2.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method status="PASS" signature="test()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="test" duration-ms="1" started-at="2016-06-30T15:29:51Z" finished-at="2016-06-30T15:29:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="895" started-at="2016-06-30T15:29:51Z" finished-at="2016-06-30T15:29:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test on [TestScript2 passed=0 failed=0 skipped=0] status=SUCCESS method=TestScript2.test()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killServer -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="446" started-at="2016-06-30T15:29:52Z" finished-at="2016-06-30T15:29:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[TestScript2 passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-06-30T15:29:52Z" finished-at="2016-06-30T15:29:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.atmecs.glucko.testscripts.TestScript2 -->
+    </test> <!-- Test3 -->
+  </suite> <!-- example suite 1 -->
+</testng-results>
