@@ -1,4 +1,4 @@
-package com.atmecs.glucko.testfunction;
+package com.atmecs.glooko.testfunction;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -6,7 +6,7 @@ import io.appium.java_client.MobileElement;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.atmecs.glucko.utility.LoadPages;
+import com.atmecs.glooko.utility.LoadPages;
 
 //Action for clicking on Dayview
 public class TapOnDayView {

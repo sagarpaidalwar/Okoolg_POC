@@ -1,4 +1,4 @@
-package com.atmecs.glucko.utility;
+package com.atmecs.glooko.utility;
 
 import java.io.File;
 import java.io.FileInputStream;

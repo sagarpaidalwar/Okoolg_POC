@@ -1,7 +1,7 @@
 /***
  *
  */
-package com.atmecs.glucko.testsuite;
+package com.atmecs.glooko.testsuite;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

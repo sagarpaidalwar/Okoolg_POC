@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="example suite 1" verbose="1" >
-<test name="Test1" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Glooko_POC" verbose="1" >
+<test name="DayView" >
 <classes>
-<class name="com.atmecs.glucko.testscripts.AddFoodMedicine"/>
+<class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/>
 </classes>
 </test>
-<test name="Test2" >
-<classes>
-<class name="com.atmecs.glucko.testscripts.TestScript1"/>
-</classes>
-</test>
+
 <test name="Test3" >
 <classes>
-<class name="com.atmecs.glucko.testscripts.TestScript2"/>
+<class name="com.atmecs.glooko.testscripts.TestScript1"/>
 </classes>
 </test>
 </suite>

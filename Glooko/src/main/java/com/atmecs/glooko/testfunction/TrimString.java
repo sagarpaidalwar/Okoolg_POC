@@ -1,4 +1,4 @@
-package com.atmecs.glucko.testfunction;
+package com.atmecs.glooko.testfunction;
 
 public class TrimString
 {

@@ -1,4 +1,4 @@
-package com.atmecs.glucko.testscripts;
+package com.atmecs.glooko.testscripts;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

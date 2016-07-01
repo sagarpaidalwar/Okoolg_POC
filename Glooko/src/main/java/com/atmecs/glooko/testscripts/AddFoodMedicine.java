@@ -1,8 +1,8 @@
-package com.atmecs.glucko.testscripts;
+package com.atmecs.glooko.testscripts;
+
 
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 import org.testng.annotations.AfterTest;
@@ -11,35 +11,34 @@ import org.testng.annotations.Test;
 
 import com.atmecs.falcon.automation.appium.manager.UserBaseTest;
 import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
-import com.atmecs.glucko.testfunction.AddNoteForCurrentDay;
-import com.atmecs.glucko.testfunction.AddNoteForGivenDate;
-import com.atmecs.glucko.testfunction.GotoLeftMenu;
-import com.atmecs.glucko.testfunction.TapOnDayView;
-import com.atmecs.glucko.testfunction.VerifyFoodAndMedicine;
-import com.atmecs.glucko.utility.LoadPages;
-import com.atmecs.glucko.utility.Log;
-import com.atmecs.glucko.utility.ReadExcel;
+import com.atmecs.falcon.automation.util.reporter.ReportLogService;
+import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
+import com.atmecs.glooko.testfunction.AddNoteForCurrentDay;
+import com.atmecs.glooko.testfunction.AddNoteForGivenDate;
+import com.atmecs.glooko.testfunction.GotoLeftMenu;
+import com.atmecs.glooko.testfunction.Swipe;
+import com.atmecs.glooko.testfunction.VerifyFoodAndMedicine;
+import com.atmecs.glooko.utility.LoadPages;
+import com.atmecs.glooko.utility.Log;
 
-public class AddFoodMedicine extends UserBaseTest {
+public class AddFoodMedicine extends UserBaseTest  {
 
-	 ReadExcel readTestData;
 	 LoadPages pageObject;
 	 GotoLeftMenu leftmenu;
-	 List<String> noOfCol;
-	 int noOfColumnValues;
 	 AddNoteForCurrentDay addFoodAndMedicine;
 	 AddNoteForGivenDate addFoodAndMedForDate;
 	 VerifyFoodAndMedicine verify;
-	 TapOnDayView tapOnDayView;
 	 boolean swipe;
 	 Properties page;
 	 XlsDataProvider xls;
-	 
-   
+	 Swipe swipeObject;
+	 int maxRow;
+	 ReportLogService report = new ReportLogServiceImpl(AddFoodMedicine.class);
+     
     @BeforeTest
     public void beforeTest() throws IOException
     {
-        readTestData= new ReadExcel(); 
+    
     	pageObject = new LoadPages();
     	leftmenu = new GotoLeftMenu();
     	addFoodAndMedicine=new AddNoteForCurrentDay();
@@ -48,32 +47,28 @@ public class AddFoodMedicine extends UserBaseTest {
     	page=pageObject.getObjectRepository("AddFood.properties");
     	verify=new VerifyFoodAndMedicine();
     	xls=new XlsDataProvider("AddNote.xls", "AddNote");
-    	
-    	  System.out.println("==============Check sheet data=============="+xls.getByRow("Food Name", 1));
-	         System.out.println("No of rows in a sheet======================================="+xls.getRowCount("AddNote.xls", "AddNote"));
+    	swipeObject=new Swipe();
+    	maxRow=xls.getRowCount("AddNote.xls", "AddNote");
+        
     }
 
     @Test
-    public void test() throws IOException, InterruptedException
+    public void test() throws Exception
     {
         System.out.println("inside testScript in test");
-    	noOfCol=readTestData.getColumnRows(0);
-	    noOfColumnValues=noOfCol.size();
-		  for(int i=1;i<noOfColumnValues;i++)
+		  for(int rowNo=1;rowNo<=maxRow;rowNo++)
 		  {
-			  String time=xls.getByRow("Time", i);
-		         System.out.println("===============Time inside add note=========="+time);
 			    //Add and verify food and medicine for current day
-			 if(readTestData.getValueByColumnNameAndRowNo("Date", i).equals("Current"))
+			 if(xls.getByRow("Date", rowNo).equals("Current"))
 			 {
-				  addFoodAndMedicine.addNoteForCurrentDate(driver, i);
+				  addFoodAndMedicine.addNoteForCurrentDate(driver, rowNo); 
 				  verify.verifyFoodAndMedicine(swipe, driver);
 		     }else
 		     {
 		    	 //Add and verify food and medicine for previous day
 			     leftmenu.leftMenu(driver); 
                  driver.findElementById(page.getProperty("addEventButton")).click();
-				 addFoodAndMedForDate.addForGivenDate(driver, i);
+				 addFoodAndMedForDate.addForGivenDate(driver, rowNo);
 				 swipe = true;
 				 verify.verifyFoodAndMedicine(swipe, driver);
 		    }
@@ -87,7 +82,6 @@ public class AddFoodMedicine extends UserBaseTest {
     @AfterTest
     public void afterTest() 
     {
-        readTestData=null;
         pageObject =null;
     	leftmenu = null;
     	addFoodAndMedicine=null;
@@ -105,25 +99,29 @@ public class AddFoodMedicine extends UserBaseTest {
 		Log.startTestCase("Deleting the food and medicine from history for the current day");
 		// Go to left menu
 		leftmenu.leftMenu(driver);
-        Log.info("Tap on left menu");
+        
+		report.info("Tap on left menu");
 		
         // Tap on history
 		driver.findElementByName("History").click();
-        Log.info("Tap on History in left menu");
+		report.info("Tap on History in left menu");
 		Properties page = pageObject.getObjectRepository("historyId.properties");
    
-		for(int i=1;i<noOfColumnValues;i++)
+		for(int i=1;i<=maxRow;i++)
 		{
-		 addFoodAndMedForDate.swipeBottomToTop(driver);
+		//Swipe Top to Bottom on history page
+		swipeObject.swipeTopToBottom(driver);
+		report.info("Done Swiping from top to bottom");
+		
 		// Delete food item from history
 		driver.findElementById(page.getProperty("foodItemId")).click();
 		driver.findElementById(page.getProperty("deleteButton")).click();
-        Log.info("Deleted the food item from history");
+		report.info("Deleted the food item from history");
 		
         // Delete medicine from from history
 		driver.findElementById(page.getProperty("medicineItemId")).click();
 		driver.findElementById(page.getProperty("deleteButton")).click();
-		Log.info("Deleted the Medicine item from history");
+		report.info("Deleted the Medicine item from history");
 		Log.endTestCase("Delete Food and Medicines");
 		}
 

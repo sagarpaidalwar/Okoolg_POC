@@ -1,4 +1,4 @@
-package com.atmecs.glucko.utility;
+package com.atmecs.glooko.utility;
 
 import org.apache.log4j.Logger;
 

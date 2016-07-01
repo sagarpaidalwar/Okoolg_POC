@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.atmecs</groupId>
-	<artifactId>dfc</artifactId>
+	<artifactId>Glooko</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -50,7 +50,7 @@
 							</execution>
 						</executions>
 						<configuration>
-							<mainClass>com.atmecs.glucko.runner.TestNGRunner</mainClass>
+							<mainClass>com.atmecs.glooko.runner.TestNGRunner</mainClass>
 							<cleanupDaemonThreads>false</cleanupDaemonThreads>
 						</configuration>
 					</plugin>

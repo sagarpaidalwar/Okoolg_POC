@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [example suite 1]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
   <test name="Test1">
     <classes>
-      <class name="com.atmecs.glucko.testscripts.AddFoodMedicine"/>
+      <class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/>
     </classes>
   </test> <!-- Test1 -->
-  <test name="Test2">
-    <classes>
-      <class name="com.atmecs.glucko.testscripts.TestScript1"/>
-    </classes>
-  </test> <!-- Test2 -->
   <test name="Test3">
     <classes>
-      <class name="com.atmecs.glucko.testscripts.TestScript2"/>
+      <class name="com.atmecs.glooko.testscripts.TestScript1"/>
     </classes>
   </test> <!-- Test3 -->
   <test name="Test1(failed)">
     <classes>
-      <class name="com.atmecs.glucko.testscripts.AddFoodMedicine">
+      <class name="com.atmecs.glooko.testscripts.TestScript1">
+        <methods>
+          <include name="startApp"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="killServer"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.atmecs.glooko.testscripts.TestScript1 -->
+      <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
         <methods>
           <include name="startApp"/>
           <include name="test"/>
@@ -28,27 +32,31 @@
           <include name="afterClass"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- com.atmecs.glucko.testscripts.AddFoodMedicine -->
-      <class name="com.atmecs.glucko.testscripts.TestScript2">
-        <methods>
-          <include name="startApp"/>
-          <include name="beforeClass"/>
-          <include name="killServer"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.atmecs.glucko.testscripts.TestScript2 -->
-      <class name="com.atmecs.glucko.testscripts.TestScript1">
-        <methods>
-          <include name="startApp"/>
-          <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="killServer"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.atmecs.glucko.testscripts.TestScript1 -->
+      </class> <!-- com.atmecs.glooko.testscripts.AddFoodMedicine -->
     </classes>
   </test> <!-- Test1(failed) -->
+  <test name="Test3(failed)">
+    <classes>
+      <class name="com.atmecs.glooko.testscripts.TestScript1">
+        <methods>
+          <include name="startApp"/>
+          <include name="beforeClass"/>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="killServer"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.atmecs.glooko.testscripts.TestScript1 -->
+      <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
+        <methods>
+          <include name="startApp"/>
+          <include name="beforeClass"/>
+          <include name="killServer"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.atmecs.glooko.testscripts.AddFoodMedicine -->
+    </classes>
+  </test> <!-- Test3(failed) -->
 </suite> <!-- Failed suite [example suite 1] -->
