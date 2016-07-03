@@ -17,7 +17,7 @@
 	<repositories>
 		<repository>
 			<id>releases</id>
-			<url>http://50.50.50.71:8081/nexus/content/repositories/falcon</url>
+			   <url>http://50.50.50.71:8081/nexus/content/repositories/falcon</url>
 		</repository>
 	</repositories>
 

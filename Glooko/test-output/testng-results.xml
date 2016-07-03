@@ -86,7 +86,7 @@
       <![CDATA[Get the medicine quantity from the graph: 100.00]]>
     </line>
     <line>
-      <![CDATA[Get the carbs Quantity from graph: 200]]>
+      <![CDATA[Get the carbs Quantity from graph: 100]]>
     </line>
     <line>
       <![CDATA[Get the Medicine quantity from history]]>
@@ -107,7 +107,7 @@
       <![CDATA[Food Quantity From history: 100]]>
     </line>
     <line>
-      <![CDATA[Food Quantity From Graph: 200]]>
+      <![CDATA[Food Quantity From Graph: 100]]>
     </line>
     <line>
       <![CDATA[Tap on left menu]]>
@@ -134,20 +134,24 @@
       <![CDATA[Deleted the Medicine item from history]]>
     </line>
   </reporter-output>
-  <suite name="Glooko_POC" duration-ms="169953" started-at="2016-07-01T13:20:37Z" finished-at="2016-07-01T13:23:26Z">
+  <suite name="Glooko_POC" duration-ms="175683" started-at="2016-07-03T11:43:20Z" finished-at="2016-07-03T11:46:15Z">
     <groups>
     </groups>
-    <test name="DayView" duration-ms="146949" started-at="2016-07-01T13:20:37Z" finished-at="2016-07-01T13:23:03Z">
+    <test name="DayView" duration-ms="150550" started-at="2016-07-03T11:43:20Z" finished-at="2016-07-03T11:45:50Z">
       <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="250" started-at="2016-07-01T18:50:37Z" finished-at="2016-07-01T18:50:37Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="15" started-at="2016-07-03T17:13:20Z" finished-at="2016-07-03T17:13:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8196" started-at="2016-07-01T18:50:37Z" finished-at="2016-07-01T18:50:45Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8296" started-at="2016-07-03T17:13:20Z" finished-at="2016-07-03T17:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="14644" started-at="2016-07-01T18:50:45Z" finished-at="2016-07-01T18:51:00Z">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="initializer" is-config="true" duration-ms="203" started-at="2016-07-03T17:13:28Z" finished-at="2016-07-03T17:13:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializer -->
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="15661" started-at="2016-07-03T17:13:28Z" finished-at="2016-07-03T17:13:44Z">
           <params>
             <param index="0">
               <value>
@@ -158,7 +162,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="121715" started-at="2016-07-01T18:51:00Z" finished-at="2016-07-01T18:53:01Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="123745" started-at="2016-07-03T17:13:44Z" finished-at="2016-07-03T17:15:48Z">
           <reporter-output>
             <line>
               <![CDATA[Tap on the add note button]]>
@@ -245,7 +249,7 @@
               <![CDATA[Get the medicine quantity from the graph: 100.00]]>
             </line>
             <line>
-              <![CDATA[Get the carbs Quantity from graph: 200]]>
+              <![CDATA[Get the carbs Quantity from graph: 100]]>
             </line>
             <line>
               <![CDATA[Get the Medicine quantity from history]]>
@@ -266,7 +270,7 @@
               <![CDATA[Food Quantity From history: 100]]>
             </line>
             <line>
-              <![CDATA[Food Quantity From Graph: 200]]>
+              <![CDATA[Food Quantity From Graph: 100]]>
             </line>
             <line>
               <![CDATA[Tap on left menu]]>
@@ -294,7 +298,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1784" started-at="2016-07-01T18:53:01Z" finished-at="2016-07-01T18:53:03Z">
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1750" started-at="2016-07-03T17:15:48Z" finished-at="2016-07-03T17:15:49Z">
           <params>
             <param index="0">
               <value>
@@ -305,27 +309,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killServer -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="344" started-at="2016-07-01T18:53:03Z" finished-at="2016-07-01T18:53:03Z">
+        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="0" started-at="2016-07-03T17:15:49Z" finished-at="2016-07-03T17:15:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deIntializer -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="848" started-at="2016-07-03T17:15:49Z" finished-at="2016-07-03T17:15:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-01T18:53:03Z" finished-at="2016-07-01T18:53:03Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-03T17:15:50Z" finished-at="2016-07-03T17:15:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.atmecs.glooko.testscripts.AddFoodMedicine -->
     </test> <!-- DayView -->
-    <test name="Test3" duration-ms="22988" started-at="2016-07-01T13:23:04Z" finished-at="2016-07-01T13:23:26Z">
+    <test name="Test3" duration-ms="25133" started-at="2016-07-03T11:45:50Z" finished-at="2016-07-03T11:46:15Z">
       <class name="com.atmecs.glooko.testscripts.TestScript1">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-07-01T18:53:04Z" finished-at="2016-07-01T18:53:04Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="16" started-at="2016-07-03T17:15:50Z" finished-at="2016-07-03T17:15:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="7894" started-at="2016-07-01T18:53:04Z" finished-at="2016-07-01T18:53:11Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="7984" started-at="2016-07-03T17:15:50Z" finished-at="2016-07-03T17:15:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="13378" started-at="2016-07-01T18:53:11Z" finished-at="2016-07-01T18:53:25Z">
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="15366" started-at="2016-07-03T17:15:58Z" finished-at="2016-07-03T17:16:14Z">
           <params>
             <param index="0">
               <value>
@@ -336,7 +344,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1405" started-at="2016-07-01T18:53:25Z" finished-at="2016-07-01T18:53:26Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="test" duration-ms="0" started-at="2016-07-03T17:16:14Z" finished-at="2016-07-03T17:16:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1518" started-at="2016-07-03T17:16:14Z" finished-at="2016-07-03T17:16:15Z">
           <params>
             <param index="0">
               <value>
@@ -347,15 +359,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killServer -->
-        <test-method status="PASS" signature="test()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="test" duration-ms="0" started-at="2016-07-01T18:53:25Z" finished-at="2016-07-01T18:53:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="295" started-at="2016-07-01T18:53:26Z" finished-at="2016-07-01T18:53:26Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="249" started-at="2016-07-03T17:16:15Z" finished-at="2016-07-03T17:16:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-01T18:53:26Z" finished-at="2016-07-01T18:53:26Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[TestScript1 passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-03T17:16:15Z" finished-at="2016-07-03T17:16:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
