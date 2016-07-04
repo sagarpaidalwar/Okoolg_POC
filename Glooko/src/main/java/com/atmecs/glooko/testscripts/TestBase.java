@@ -16,7 +16,7 @@ import com.atmecs.glooko.utility.LoadPages;
 public class TestBase  extends UserBaseTest{
 	 protected LoadPages pageObject;
 	 protected AddNote addNote; 
-	 protected VerifyFoodAndMedicine verify;
+	 protected VerifyFoodAndMedicine verifyFoodMedicine;
 	 protected Properties page;
 	 protected XlsDataProvider xls;
 	 protected Swipe swipeObject;
@@ -26,21 +26,21 @@ public class TestBase  extends UserBaseTest{
 	 public void initializer() throws IOException
 	 {
 		    pageObject = new LoadPages();
-	    	addNote=new AddNote();
+	    	addNote = new AddNote();
 	    	page=pageObject.getObjectRepository("AddFood.properties");
-	    	verify=new VerifyFoodAndMedicine();
+	    	verifyFoodMedicine=new VerifyFoodAndMedicine();
 	    	xls=new XlsDataProvider("AddNote.xls", "AddNote");
 	    	swipeObject=new Swipe();
 	    	maxRow=xls.getRowCount("AddNote.xls", "AddNote");
 	 }
-	 @AfterClass
+	 @AfterClass 
     public void deIntializer()
 	 {
-		 pageObject =null;
+		    pageObject =null;
 	    	addNote=null;
 	    	page=null;
 	    	xls=null;
 	    	swipeObject=null;
-	    	verify=null;
+	    	verifyFoodMedicine=null;
 	 }
 }

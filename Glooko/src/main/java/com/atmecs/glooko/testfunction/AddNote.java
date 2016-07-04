@@ -12,6 +12,7 @@ import com.atmecs.falcon.automation.mobileui.components.DatePicker;
 import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
 import com.atmecs.falcon.automation.util.reporter.ReportLogService;
 import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
+import com.atmecs.falcon.automation.verifyresult.VerificationManager;
 import com.atmecs.glooko.utility.LoadPages;
 import com.atmecs.glooko.utility.Log;
 import com.atmecs.glooko.utility.Time;
@@ -51,9 +52,8 @@ public class AddNote {
 		 //Add time 
 		 timeDate.addTime(driver, time);
 		 report.info("Time added successfully");
-        		 
-		// Add Food
-
+		VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Incorrect time added");
+         // Add Food
 		 addFoodMedicine(driver, rowNo);
 	 
 	}
@@ -63,13 +63,13 @@ public class AddNote {
 	 */
 		public void addFoodMedicine(AppiumDriver<MobileElement> driver,int rowNo) throws IOException
 		{
-			 page = pageObject.getObjectRepository("AddFood.properties");
+			page = pageObject.getObjectRepository("AddFood.properties");
 			driver.findElementById(page.getProperty("foodText")).sendKeys(xls.getByRow("Food Name", rowNo));
 			report.info("Adding Food name");
 				
 		     // Add carbs
 			driver.findElementById(page.getProperty("carbsText")).sendKeys(xls.getByRow("Food Quantity", rowNo));
-			report.info("Adding quantity of carbs");
+			report.info("Adding; quantity of carbs");
 						
 			// Add medicine Quntity
 			driver.findElementById(page.getProperty("medicineQuntity")).sendKeys(xls.getByRow("Medicine Quantity", rowNo));
@@ -78,6 +78,7 @@ public class AddNote {
 			// Save the note
 			driver.findElementById(page.getProperty("saveNote")).click();
 			report.info("Saving Food and Medicine");
+			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "App not navigate to the History screen");
 			
 		}
 		/*
@@ -85,16 +86,12 @@ public class AddNote {
 		 */
 	    public void addNoteForCurrentDate(AppiumDriver<MobileElement> driver,int rowNo) throws IOException
 		 {
-	    		
-			 
 			    page = pageObject.getObjectRepository("AddFood.properties");
 			
-			    Log.startTestCase("Add Food and Medicine");
-				
-				
 				// Tap on add note button
 				driver.findElementById(page.getProperty("addNote")).click();
 				report.info("Tap on the add note button");
+				VerificationManager.verifyString("Quick Add", driver.findElementByName("Quick Add").getText(), "Not navigate to the Quick add screen ");
 				
 			   //Add Food and Medicine
 				addFoodMedicine(driver, rowNo);
@@ -109,26 +106,28 @@ public class AddNote {
 			 page = pageObject.getObjectRepository("AddFood.properties");
 			 driver.findElementByClassName( page.getProperty("imageButton")).click();
              driver.findElementById(page.getProperty("addEventButton")).click();
-			 
+             report.info("Tap on add event button"); 
+             VerificationManager.verifyString("Quick Add", driver.findElementByName("Quick Add").getText(), "Not navigate to the Quick add screen ");
 			
 		}
 		
 		/*
 		 * Deleting the food and medicine from history for the current day
 		 */
-		public void deleteFoodAndMedicineForCurrentDay(AppiumDriver<MobileElement> driver) throws IOException, InterruptedException {
+		public void deleteFoodAndMedicineForCurrentDay(AppiumDriver<MobileElement> driver) throws IOException, InterruptedException
+		{
 			
 			int maxRow=xls.getRowCount("AddNote.xls", "AddNote");
 			Properties page = pageObject.getObjectRepository("historyId.properties");
 			// Go to left menu
 			driver.findElementByClassName( page.getProperty("imageButton")).click();
-	        
 			report.info("Tap on left menu");
-			
-	        // Tap on history
+			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the left menu");			
+ 
+			// Tap on history
 			driver.findElementByName("History").click();
 			report.info("Tap on History in left menu");
-			
+			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the History Screen");
 	   
 			for(int i=1;i<=maxRow;i++)
 			{
@@ -146,8 +145,6 @@ public class AddNote {
 			driver.findElementById(page.getProperty("deleteButton")).click();
 			report.info("Deleted the Medicine item from history");
 			}
-		
-	
 
-   }
-		}
+       }
+}

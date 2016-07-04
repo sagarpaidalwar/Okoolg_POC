@@ -3,43 +3,31 @@ package com.atmecs.glooko.testscripts;
 
 
 import java.io.IOException;
-import java.util.Properties;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.atmecs.falcon.automation.appium.manager.UserBaseTest;
-import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
-import com.atmecs.falcon.automation.util.reporter.ReportLogService;
-import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
-import com.atmecs.glooko.testfunction.AddNote;
+import com.atmecs.falcon.automation.verifyresult.VerificationManager;
 import com.atmecs.glooko.testfunction.Swipe;
-import com.atmecs.glooko.testfunction.VerifyFoodAndMedicine;
-import com.atmecs.glooko.utility.LoadPages;
-import com.atmecs.glooko.utility.Log;
 
 public class AddFoodMedicine extends TestBase  {
 
      String addOnDate;
 	 boolean swipe;
-	 ReportLogService report = new ReportLogServiceImpl(AddFoodMedicine.class);
-	
+	 VerificationManager verify;
     @BeforeTest
     public void beforeTest() throws IOException
     {
-    
+       
     	swipe = false;
-    	verify=new VerifyFoodAndMedicine();
-    	swipeObject=new Swipe();
-        
+    	swipeObject = new Swipe();
     }
 
     @Test
     public void test() throws Exception
     {
-    	
-        System.out.println("inside testScript in test");
+    	VerificationManager.verifyString("Home", driver.findElementByName("Home").getText(), "App is not started");
 		  for(int rowNo=1;rowNo<=maxRow;rowNo++)
 		  {
 			  addOnDate = xls.getByRow("Date", rowNo).trim();
@@ -47,7 +35,7 @@ public class AddFoodMedicine extends TestBase  {
 			 if(addOnDate.equalsIgnoreCase("Current"))
 			 {
 				 addNote.addNoteForCurrentDate(driver, rowNo); 
-				  verify.verifyFoodAndMedicine(swipe, driver);
+				 verifyFoodMedicine.verifyFoodAndMedicine(swipe, driver);
 		     }
 			 if(addOnDate.equalsIgnoreCase("Previous")) 
 		     {
@@ -59,7 +47,7 @@ public class AddFoodMedicine extends TestBase  {
 				 
 		    	 swipe = true;
 		    	 //Verify food and medicine in day view
-				 verify.verifyFoodAndMedicine(swipe, driver);
+		    	 verifyFoodMedicine.verifyFoodAndMedicine(swipe, driver);
 		    }
 			    
 		  }  
@@ -71,7 +59,9 @@ public class AddFoodMedicine extends TestBase  {
     @AfterTest
     public void afterTest() 
     {
-  }
+    	swipeObject=null;
+    	
+    }
 
 
 

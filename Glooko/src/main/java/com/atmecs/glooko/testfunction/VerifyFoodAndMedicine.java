@@ -14,6 +14,7 @@ import org.testng.Assert;
 
 import com.atmecs.falcon.automation.util.reporter.ReportLogService;
 import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
+import com.atmecs.falcon.automation.verifyresult.VerificationManager;
 import com.atmecs.glooko.testfunction.GotoLeftMenu;
 import com.atmecs.glooko.testfunction.TrimString;
 import com.atmecs.glooko.utility.Constants;
@@ -39,11 +40,13 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		// Go to left menu
 		leftmenu.leftMenu(driver);
 		report.info("Tap on left menu");
+		VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the left menu");
 		
 		// Go to Day View
 		tapOnDayView = new TapOnDayView();
 		tapOnDayView.tapOnDayview(driver);
 		report.info("Tap on Day View in left side menu");
+		//VerificationManager.verifyString("", "", "");
 		
 		//Swipe to given date
 		if(swipe)
@@ -93,13 +96,11 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		
 		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
 		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
-		assert medicineQuntityFromHistory.equals(medicineQuntityByGraph) : "Medicine Quntity from graph does not matches with history ";
-		
+		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity not matches with graph");
 		
 		report.info("Food Quantity From history: "+foodQuntityFromHistory);
 		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
-		assert foodQuntityFromHistory.equals(foodQuntityByGraph) : "Food Quntity from graph does not matches with history";
-		
+		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity not matches with graph");
 	}
 	
 
