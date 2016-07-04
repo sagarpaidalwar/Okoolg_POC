@@ -6,9 +6,4 @@
       <class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/>
     </classes>
   </test> <!-- DayView -->
-  <test name="Test3">
-    <classes>
-      <class name="com.atmecs.glooko.testscripts.TestScript1"/>
-    </classes>
-  </test> <!-- Test3 -->
 </suite> <!-- Failed suite [Glooko_POC] -->

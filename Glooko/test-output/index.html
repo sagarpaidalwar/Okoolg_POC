@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Glooko_POC">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +103,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Glooko_POC" title="com.atmecs.glooko.testscripts.AddFoodMedicine" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Glooko_POC" title="com.atmecs.glooko.testscripts.TestScript1" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Glooko_POC -->
@@ -122,21 +117,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Glooko_POC" class="panel Glooko_POC">
-          <div class="suite-Glooko_POC-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.atmecs.glooko.testscripts.TestScript1</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test">
-                  </a> <!-- test -->
-                  <span class="method-name">test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Glooko_POC-class-passed -->
           <div class="suite-Glooko_POC-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -167,11 +147,6 @@
       &lt;class name=&quot;com.atmecs.glooko.testscripts.AddFoodMedicine&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- DayView --&gt;
-  &lt;test name=&quot;Test3&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.atmecs.glooko.testscripts.TestScript1&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test3 --&gt;
 &lt;/suite&gt; &lt;!-- Glooko_POC --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,9 +159,6 @@
             <ul>
               <li>
                 <span class="test-name">DayView (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test3 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,15 +184,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'com.atmecs.glooko.testscripts.AddFoodMedicine')
-data.setCell(0, 3, 123745);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test')
-data.setCell(1, 2, 'com.atmecs.glooko.testscripts.TestScript1')
-data.setCell(1, 3, 0);
+data.setCell(0, 3, 124646);
 window.suiteTableData['Glooko_POC']= { tableData: data, tableDiv: 'times-div-Glooko_POC'}
 return data;
 }
@@ -311,62 +279,31 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initializer</span>
-                <span class="method-start">8327 ms</span>
+                <span class="method-start">35352 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">startApp(public void com.atmecs.glooko.testscripts.AddFoodMedicine.test() throws java.lang.Exception)</span>
-                <span class="method-start">8546 ms</span>
+                <span class="method-start">35727 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">24207 ms</span>
+                <span class="method-start">54189 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">killServer([TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFood...)</span>
-                <span class="method-start">147952 ms</span>
+                <span class="method-start">178835 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">149702 ms</span>
-              </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">deIntializer</span>
-                <span class="method-start">149702 ms</span>
+                <span class="method-start">180748 ms</span>
               </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">150550 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.atmecs.glooko.testscripts.TestScript1</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">150550 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">150566 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">startApp(public void com.atmecs.glooko.testscripts.TestScript1.test())</span>
-                <span class="method-start">158550 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">killServer([TestResult name=test on [TestScript1 passed=0 failed=0 skipped=0] status=SUCCESS method=TestScript1...)</span>
-                <span class="method-start">173916 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">test</span>
-                <span class="method-start">173916 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">175434 ms</span>
+                <span class="method-start">180748 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">175683 ms</span>
+                <span class="method-start">181249 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

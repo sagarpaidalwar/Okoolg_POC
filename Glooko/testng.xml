@@ -6,10 +6,4 @@
 <class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/>
 </classes>
 </test>
-
-<test name="Test3" >
-<classes>
-<class name="com.atmecs.glooko.testscripts.TestScript1"/>
-</classes>
-</test>
 </suite>

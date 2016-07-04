@@ -41,5 +41,6 @@ public class TestBase  extends UserBaseTest{
 	    	page=null;
 	    	xls=null;
 	    	swipeObject=null;
+	    	verify=null;
 	 }
 }
