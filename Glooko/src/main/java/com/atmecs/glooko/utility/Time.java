@@ -15,6 +15,7 @@ public class Time {
 	XlsDataProvider xls;
 	LoadPages pageObject;
 	Properties page;
+    Calendar cal  = Calendar.getInstance();
 	/*
 	 * Add time in time picker
 	 */
@@ -50,13 +51,36 @@ public class Time {
 	 */
 	public String getPreviousDate()
 	{
-		  Calendar cal  = Calendar.getInstance();
+		
 		   
 			 //subtracting a day
 			 cal.add(Calendar.DATE, -1);
 			 SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
 			 String previousDate = date.format(new Date(cal.getTimeInMillis()));
 			 return previousDate;
+	}
+	
+	public String getDateByDayView()
+	{
+		 cal.add(Calendar.DATE,0);
+		 SimpleDateFormat date = new SimpleDateFormat("EEE, MMM dd");
+		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
+		 return currentDate;
+		
+	}
+	public String getPreviousDateByDayView() 
+	{
+		cal.add(Calendar.DATE,-1);
+		 SimpleDateFormat date = new SimpleDateFormat("EEE, MMM dd");
+		 String previousDate = date.format(new Date(cal.getTimeInMillis()));
+		 return previousDate;
+	}
+	public String getDateByHistory()
+	{
+		 cal.add(Calendar.DATE,0);
+		 SimpleDateFormat date = new SimpleDateFormat("EEE d MMM, yyyy");
+		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
+		 return currentDate;
 	}
 
 }

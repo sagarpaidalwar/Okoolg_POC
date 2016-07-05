@@ -2,7 +2,6 @@ package com.atmecs.glooko.testfunction;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,45 +14,39 @@ import org.testng.Assert;
 import com.atmecs.falcon.automation.util.reporter.ReportLogService;
 import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
 import com.atmecs.falcon.automation.verifyresult.VerificationManager;
-import com.atmecs.glooko.testfunction.GotoLeftMenu;
-import com.atmecs.glooko.testfunction.TrimString;
 import com.atmecs.glooko.utility.Constants;
 import com.atmecs.glooko.utility.LoadPages;
-import com.atmecs.glooko.utility.Log;
-import com.atmecs.glooko.utility.ReadExcel;
+import com.atmecs.glooko.utility.Time;
 
 public class VerifyFoodAndMedicine implements Constants{
 	
 	ReportLogService report = new ReportLogServiceImpl(VerifyFoodAndMedicine.class);
-	TapOnDayView tapOnDayView;
 	LoadPages pageObject = new LoadPages();
 	TrimString trimStringobj = new TrimString();
-	GotoLeftMenu leftmenu = new GotoLeftMenu();
 	Swipe swipeObject=new Swipe();
+	Time dateTime=new Time();
 	
 	
 public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driver) throws IOException, InterruptedException {
 		
-		Log.startTestCase("Verify Food and Medicine Quntity from graph to the History ");
 		
 		Properties page = pageObject.getObjectRepository("dayViewId.properties");
 		// Go to left menu
-		leftmenu.leftMenu(driver);
+		driver.findElementByClassName( page.getProperty("imageButton")).click();
 		report.info("Tap on left menu");
 		VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the left menu");
 		
 		// Go to Day View
-		tapOnDayView = new TapOnDayView();
-		tapOnDayView.tapOnDayview(driver);
+		driver.findElementByName(page.getProperty("dayViewButton")).click();
 		report.info("Tap on Day View in left side menu");
-		//VerificationManager.verifyString("", "", "");
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getDateByDayView() ,"Not navigate to the Day View Screen");
 		
 		//Swipe to given date
 		if(swipe)
 		{
-
 			Thread.sleep(WAIT_TIME);
 			swipeObject.swipeLeftToRight(driver);
+			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
 		 }
 			
 		
@@ -97,8 +90,8 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
 		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
 		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity not matches with graph");
-		
-		report.info("Food Quantity From history: "+foodQuntityFromHistory);
+	    
+		 report.info("Food Quantity From history: "+foodQuntityFromHistory);
 		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
 		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity not matches with graph");
 	}

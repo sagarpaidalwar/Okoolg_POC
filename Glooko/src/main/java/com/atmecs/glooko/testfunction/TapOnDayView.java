@@ -23,7 +23,7 @@ public class TapOnDayView {
 		// Tap on DayView
 		viewDayView = page.getProperty("dayViewButton");
 		driver.findElementByName(viewDayView).click();
- 
+		
 	
 	}
 

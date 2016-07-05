@@ -4,9 +4,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
+
 
 import com.atmecs.falcon.automation.mobileui.components.DatePicker;
 import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
@@ -14,9 +17,9 @@ import com.atmecs.falcon.automation.util.reporter.ReportLogService;
 import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
 import com.atmecs.falcon.automation.verifyresult.VerificationManager;
 import com.atmecs.glooko.utility.LoadPages;
-import com.atmecs.glooko.utility.Log;
 import com.atmecs.glooko.utility.Time;
-public class AddNote {
+import com.atmecs.glooko.utility.Constants;
+public class AddNote implements Constants{
 	
 	
 	Properties page;
@@ -25,6 +28,10 @@ public class AddNote {
 	XlsDataProvider xls=new XlsDataProvider("AddNote.xls", "AddNote");
 	ReportLogService report = new ReportLogServiceImpl(AddNote.class);
 	Swipe swipeObject=new Swipe();
+	List<MobileElement> historyElement;
+	Time dateTime=new Time();
+	
+	
 	/*
 	 * Add Food and Medicine For the Given Date
 	 */
@@ -52,8 +59,9 @@ public class AddNote {
 		 //Add time 
 		 timeDate.addTime(driver, time);
 		 report.info("Time added successfully");
-		VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Incorrect time added");
-         // Add Food
+		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Incorrect time added");
+      
+		// Add Food
 		 addFoodMedicine(driver, rowNo);
 	 
 	}
@@ -81,11 +89,13 @@ public class AddNote {
 			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "App not navigate to the History screen");
 			
 		}
+	
 		/*
 		 * Add food and Medicine for current date
 		 */
 	    public void addNoteForCurrentDate(AppiumDriver<MobileElement> driver,int rowNo) throws IOException
 		 {
+	            report.info("Inside the addNoteCurrentDate method");    	
 			    page = pageObject.getObjectRepository("AddFood.properties");
 			
 				// Tap on add note button
@@ -129,7 +139,7 @@ public class AddNote {
 			report.info("Tap on History in left menu");
 			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the History Screen");
 	   
-			for(int i=1;i<=maxRow;i++)
+			for(int rowNo=1;rowNo<=maxRow;rowNo++) 
 			{
 			//Swipe Top to Bottom on history page
 			swipeObject.swipeTopToBottom(driver);
@@ -143,8 +153,16 @@ public class AddNote {
 	        // Delete medicine from from history
 			driver.findElementById(page.getProperty("medicineItemId")).click();
 			driver.findElementById(page.getProperty("deleteButton")).click();
-			report.info("Deleted the Medicine item from history");
+			Thread.sleep(WAIT_TIME);
+			
 			}
+			historyElement=driver.findElements(By.id("com.glooko.logbook:id/history_section"));
+			
+			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(dateTime.getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
+	         report.info("Data is deleted successfully");
+		}
+      
+		}
+		
+		
 
-       }
-}

@@ -2,13 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[Value for the maxRows2]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Home: ACTUAL : Home 	EXPECTED :Home]]>
+    </line>
+    <line>
+      <![CDATA[Inside the for loop=========2]]>
+    </line>
+    <line>
+      <![CDATA[Inside the addNoteCurrentDate method]]>
+    </line>
+    <line>
       <![CDATA[Tap on the add note button]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add]]>
     </line>
     <line>
       <![CDATA[Adding Food name]]>
     </line>
     <line>
-      <![CDATA[Adding quantity of carbs]]>
+      <![CDATA[Adding; quantity of carbs]]>
     </line>
     <line>
       <![CDATA[Adding Medicine quantity]]>
@@ -17,10 +32,19 @@
       <![CDATA[Saving Food and Medicine]]>
     </line>
     <line>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+    </line>
+    <line>
       <![CDATA[Tap on left menu]]>
     </line>
     <line>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+    </line>
+    <line>
       <![CDATA[Tap on Day View in left side menu]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Tue, Jul 05: ACTUAL : Tue, Jul 05 	EXPECTED :Tue, Jul 05]]>
     </line>
     <line>
       <![CDATA[Tap on the Food and medicine below the graph]]>
@@ -47,10 +71,25 @@
       <![CDATA[Medicine Quantity From Graph: 200.00]]>
     </line>
     <line>
+      <![CDATA[PASS : 200.00: ACTUAL : 200.00 	EXPECTED :200.00]]>
+    </line>
+    <line>
       <![CDATA[Food Quantity From history: 200]]>
     </line>
     <line>
       <![CDATA[Food Quantity From Graph: 200]]>
+    </line>
+    <line>
+      <![CDATA[PASS : 200: ACTUAL : 200 	EXPECTED :200]]>
+    </line>
+    <line>
+      <![CDATA[Inside the for loop=========2]]>
+    </line>
+    <line>
+      <![CDATA[Tap on add event button]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add]]>
     </line>
     <line>
       <![CDATA[Adding for the given date]]>
@@ -62,10 +101,13 @@
       <![CDATA[Time added successfully]]>
     </line>
     <line>
+      <![CDATA[PASS : 11:45 AM: ACTUAL : 11:45 AM 	EXPECTED :11:45 AM]]>
+    </line>
+    <line>
       <![CDATA[Adding Food name]]>
     </line>
     <line>
-      <![CDATA[Adding quantity of carbs]]>
+      <![CDATA[Adding; quantity of carbs]]>
     </line>
     <line>
       <![CDATA[Adding Medicine quantity]]>
@@ -74,10 +116,22 @@
       <![CDATA[Saving Food and Medicine]]>
     </line>
     <line>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+    </line>
+    <line>
       <![CDATA[Tap on left menu]]>
     </line>
     <line>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+    </line>
+    <line>
       <![CDATA[Tap on Day View in left side menu]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Tue, Jul 05: ACTUAL : Tue, Jul 05 	EXPECTED :Tue, Jul 05]]>
+    </line>
+    <line>
+      <![CDATA[PASS : Mon, Jul 04: ACTUAL : Mon, Jul 04 	EXPECTED :Mon, Jul 04]]>
     </line>
     <line>
       <![CDATA[Tap on the Food and medicine below the graph]]>
@@ -104,25 +158,28 @@
       <![CDATA[Medicine Quantity From Graph: 100.00]]>
     </line>
     <line>
+      <![CDATA[PASS : 100.00: ACTUAL : 100.00 	EXPECTED :100.00]]>
+    </line>
+    <line>
       <![CDATA[Food Quantity From history: 100]]>
     </line>
     <line>
       <![CDATA[Food Quantity From Graph: 100]]>
     </line>
     <line>
+      <![CDATA[PASS : 100: ACTUAL : 100 	EXPECTED :100]]>
+    </line>
+    <line>
       <![CDATA[Tap on left menu]]>
+    </line>
+    <line>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
     </line>
     <line>
       <![CDATA[Tap on History in left menu]]>
     </line>
     <line>
-      <![CDATA[Done Swiping from top to bottom]]>
-    </line>
-    <line>
-      <![CDATA[Deleted the food item from history]]>
-    </line>
-    <line>
-      <![CDATA[Deleted the Medicine item from history]]>
+      <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
     </line>
     <line>
       <![CDATA[Done Swiping from top to bottom]]>
@@ -131,27 +188,29 @@
       <![CDATA[Deleted the food item from history]]>
     </line>
     <line>
-      <![CDATA[Deleted the Medicine item from history]]>
+      <![CDATA[Done Swiping from top to bottom]]>
+    </line>
+    <line>
+      <![CDATA[Deleted the food item from history]]>
+    </line>
+    <line>
+      <![CDATA[Data is deleted successfully]]>
     </line>
   </reporter-output>
-  <suite name="Glooko_POC" duration-ms="181249" started-at="2016-07-04T06:41:25Z" finished-at="2016-07-04T06:44:26Z">
+  <suite name="Glooko_POC" duration-ms="145619" started-at="2016-07-05T12:43:14Z" finished-at="2016-07-05T12:45:40Z">
     <groups>
     </groups>
-    <test name="DayView" duration-ms="181249" started-at="2016-07-04T06:41:25Z" finished-at="2016-07-04T06:44:26Z">
+    <test name="DayView" duration-ms="145619" started-at="2016-07-05T12:43:14Z" finished-at="2016-07-05T12:45:40Z">
       <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="31" started-at="2016-07-04T12:11:25Z" finished-at="2016-07-04T12:11:25Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="195" started-at="2016-07-05T18:13:14Z" finished-at="2016-07-05T18:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="35321" started-at="2016-07-04T12:11:25Z" finished-at="2016-07-04T12:12:00Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="7989" started-at="2016-07-05T18:13:15Z" finished-at="2016-07-05T18:13:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="initializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="initializer" is-config="true" duration-ms="375" started-at="2016-07-04T12:12:00Z" finished-at="2016-07-04T12:12:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="18462" started-at="2016-07-04T12:12:00Z" finished-at="2016-07-04T12:12:19Z">
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="13974" started-at="2016-07-05T18:13:23Z" finished-at="2016-07-05T18:13:36Z">
           <params>
             <param index="0">
               <value>
@@ -162,16 +221,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="124646" started-at="2016-07-04T12:12:19Z" finished-at="2016-07-04T12:14:23Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="121299" started-at="2016-07-05T18:13:36Z" finished-at="2016-07-05T18:15:38Z">
           <reporter-output>
             <line>
+              <![CDATA[Value for the maxRows2]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Home: ACTUAL : Home 	EXPECTED :Home]]>
+            </line>
+            <line>
+              <![CDATA[Inside the for loop=========2]]>
+            </line>
+            <line>
+              <![CDATA[Inside the addNoteCurrentDate method]]>
+            </line>
+            <line>
               <![CDATA[Tap on the add note button]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add]]>
             </line>
             <line>
               <![CDATA[Adding Food name]]>
             </line>
             <line>
-              <![CDATA[Adding quantity of carbs]]>
+              <![CDATA[Adding; quantity of carbs]]>
             </line>
             <line>
               <![CDATA[Adding Medicine quantity]]>
@@ -180,10 +254,19 @@
               <![CDATA[Saving Food and Medicine]]>
             </line>
             <line>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+            </line>
+            <line>
               <![CDATA[Tap on left menu]]>
             </line>
             <line>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+            </line>
+            <line>
               <![CDATA[Tap on Day View in left side menu]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Tue, Jul 05: ACTUAL : Tue, Jul 05 	EXPECTED :Tue, Jul 05]]>
             </line>
             <line>
               <![CDATA[Tap on the Food and medicine below the graph]]>
@@ -210,10 +293,25 @@
               <![CDATA[Medicine Quantity From Graph: 200.00]]>
             </line>
             <line>
+              <![CDATA[PASS : 200.00: ACTUAL : 200.00 	EXPECTED :200.00]]>
+            </line>
+            <line>
               <![CDATA[Food Quantity From history: 200]]>
             </line>
             <line>
               <![CDATA[Food Quantity From Graph: 200]]>
+            </line>
+            <line>
+              <![CDATA[PASS : 200: ACTUAL : 200 	EXPECTED :200]]>
+            </line>
+            <line>
+              <![CDATA[Inside the for loop=========2]]>
+            </line>
+            <line>
+              <![CDATA[Tap on add event button]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add]]>
             </line>
             <line>
               <![CDATA[Adding for the given date]]>
@@ -225,10 +323,13 @@
               <![CDATA[Time added successfully]]>
             </line>
             <line>
+              <![CDATA[PASS : 11:45 AM: ACTUAL : 11:45 AM 	EXPECTED :11:45 AM]]>
+            </line>
+            <line>
               <![CDATA[Adding Food name]]>
             </line>
             <line>
-              <![CDATA[Adding quantity of carbs]]>
+              <![CDATA[Adding; quantity of carbs]]>
             </line>
             <line>
               <![CDATA[Adding Medicine quantity]]>
@@ -237,10 +338,22 @@
               <![CDATA[Saving Food and Medicine]]>
             </line>
             <line>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+            </line>
+            <line>
               <![CDATA[Tap on left menu]]>
             </line>
             <line>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
+            </line>
+            <line>
               <![CDATA[Tap on Day View in left side menu]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Tue, Jul 05: ACTUAL : Tue, Jul 05 	EXPECTED :Tue, Jul 05]]>
+            </line>
+            <line>
+              <![CDATA[PASS : Mon, Jul 04: ACTUAL : Mon, Jul 04 	EXPECTED :Mon, Jul 04]]>
             </line>
             <line>
               <![CDATA[Tap on the Food and medicine below the graph]]>
@@ -267,25 +380,28 @@
               <![CDATA[Medicine Quantity From Graph: 100.00]]>
             </line>
             <line>
+              <![CDATA[PASS : 100.00: ACTUAL : 100.00 	EXPECTED :100.00]]>
+            </line>
+            <line>
               <![CDATA[Food Quantity From history: 100]]>
             </line>
             <line>
               <![CDATA[Food Quantity From Graph: 100]]>
             </line>
             <line>
+              <![CDATA[PASS : 100: ACTUAL : 100 	EXPECTED :100]]>
+            </line>
+            <line>
               <![CDATA[Tap on left menu]]>
+            </line>
+            <line>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
             </line>
             <line>
               <![CDATA[Tap on History in left menu]]>
             </line>
             <line>
-              <![CDATA[Done Swiping from top to bottom]]>
-            </line>
-            <line>
-              <![CDATA[Deleted the food item from history]]>
-            </line>
-            <line>
-              <![CDATA[Deleted the Medicine item from history]]>
+              <![CDATA[PASS : History: ACTUAL : History 	EXPECTED :History]]>
             </line>
             <line>
               <![CDATA[Done Swiping from top to bottom]]>
@@ -294,30 +410,36 @@
               <![CDATA[Deleted the food item from history]]>
             </line>
             <line>
-              <![CDATA[Deleted the Medicine item from history]]>
+              <![CDATA[Done Swiping from top to bottom]]>
+            </line>
+            <line>
+              <![CDATA[Deleted the food item from history]]>
+            </line>
+            <line>
+              <![CDATA[Data is deleted successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1913" started-at="2016-07-04T12:14:23Z" finished-at="2016-07-04T12:14:25Z">
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1867" started-at="2016-07-05T18:15:38Z" finished-at="2016-07-05T18:15:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=Tap on the add note button]]]>
+                <![CDATA[[TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=Value for the maxRows2]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killServer -->
-        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="0" started-at="2016-07-04T12:14:25Z" finished-at="2016-07-04T12:14:25Z">
+        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="1" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deIntializer -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="501" started-at="2016-07-04T12:14:25Z" finished-at="2016-07-04T12:14:26Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="283" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-04T12:14:26Z" finished-at="2016-07-04T12:14:26Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
