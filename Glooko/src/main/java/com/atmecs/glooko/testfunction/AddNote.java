@@ -42,6 +42,7 @@ public class AddNote implements Constants{
 		
 		 page = pageObject.getObjectRepository("AddFood.properties");
 		 report.info("Adding for the given date");
+		 report.info(" ");
 		 String time=xls.getByRow("Time", rowNo);
 
 		 //Add previous day date 
@@ -55,10 +56,11 @@ public class AddNote implements Constants{
 			e.printStackTrace();
 		}
 		 report.info("Date added successfully");
-         
+		 report.info(" ");
 		 //Add time 
 		 timeDate.addTime(driver, time);
 		 report.info("Time added successfully");
+		 report.info(" ");
 		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Time Check in Quick Add Screen - Time selected in Time Picker and Time in Time Text DOESNOT match");
 		       
 		// Add Food
@@ -73,21 +75,25 @@ public class AddNote implements Constants{
 		{
 			page = pageObject.getObjectRepository("AddFood.properties");
 			driver.findElementById(page.getProperty("foodText")).sendKeys(xls.getByRow("Food Name", rowNo));
-			report.info("Adding Food name");
-				
+			report.info("Adding Food name "+xls.getByRow("Food Name", rowNo));
+			report.info(" ");
+			 
 		     // Add carbs
 			driver.findElementById(page.getProperty("carbsText")).sendKeys(xls.getByRow("Food Quantity", rowNo));
-			report.info("Adding; quantity of carbs");
-						
+			report.info("Adding; quantity of carbs "+xls.getByRow("Food Quantity", rowNo));
+			report.info(" ");
+			 
 			// Add medicine Quntity
 			driver.findElementById(page.getProperty("medicineQuntity")).sendKeys(xls.getByRow("Medicine Quantity", rowNo));
-			report.info("Adding Medicine quantity");
-						
+			report.info("Adding Medicine quantity "+xls.getByRow("Medicine Quantity", rowNo));
+			report.info(" ");
+			 
 			// Save the note
 			driver.findElementById(page.getProperty("saveNote")).click();
 			report.info("Saving Food and Medicine");
-			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "App not navigate to the History screen");
-			
+			report.info(" ");
+			VerificationManager.verifyString("History", driver.findElementByXPath(page.getProperty("history")).getText(), "App not navigate to the History screen");
+			report.info(" ");
 		}
 	
 		/*
@@ -100,7 +106,8 @@ public class AddNote implements Constants{
 				// Tap on add note button
 				driver.findElementById(page.getProperty("addNote")).click();
 				report.info("Tap on the add note button");
-				VerificationManager.verifyString("Quick Add", driver.findElementByName("Quick Add").getText(), "Not navigate to the Quick add screen ");
+				report.info(" ");
+				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
 				
 			   //Add Food and Medicine
 				addFoodMedicine(driver, rowNo);
@@ -116,8 +123,10 @@ public class AddNote implements Constants{
 			 driver.findElementByClassName( page.getProperty("imageButton")).click();
              driver.findElementById(page.getProperty("addEventButton")).click();
              report.info("Tap on add event button"); 
-             VerificationManager.verifyString("Quick Add", driver.findElementByName("Quick Add").getText(), "Not navigate to the Quick add screen ");
-			
+             report.info(" ");
+             VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
+             report.info(" ");
+             
 		}
 		
 		/*
@@ -131,33 +140,39 @@ public class AddNote implements Constants{
 			// Go to left menu
 			driver.findElementByClassName( page.getProperty("imageButton")).click();
 			report.info("Tap on left menu");
-			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the left menu");			
- 
+			Thread.sleep(2000);
+			report.info(" ");
+			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Not navigate to the left menu");			
+			report.info(" ");
+		
 			// Tap on history
 			driver.findElementByName("History").click();
 			report.info("Tap on History in left menu");
-			VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the History Screen");
-	   
+			report.info(" ");
+			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "Not navigate to the History Screen");
+			report.info(" ");
 			for(int rowNo=1;rowNo<=maxRow;rowNo++) 
 			{
 			//Swipe Top to Bottom on history page
 			swipeObject.swipeTopToBottom(driver);
 			report.info("Done Swiping from top to bottom");
+			report.info(" ");
 			
 			// Delete food item from history
 			driver.findElementById(page.getProperty("foodItemId")).click();
 			driver.findElementById(page.getProperty("deleteButton")).click();
 			report.info("Deleted the food item from history");
-			
+			report.info(" ");
 	        // Delete medicine from from history
 			driver.findElementById(page.getProperty("medicineItemId")).click();
 			driver.findElementById(page.getProperty("deleteButton")).click();
 			
 			}
-			 historyElement=driver.findElements(By.id("com.glooko.logbook:id/history_section"));
+			 historyElement=driver.findElements(By.id(page.getProperty("historySection")));
 			 
 			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(dateTime.getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
 	         report.info("Data is deleted successfully");
+	         report.info(" ");
 		}
       
 }

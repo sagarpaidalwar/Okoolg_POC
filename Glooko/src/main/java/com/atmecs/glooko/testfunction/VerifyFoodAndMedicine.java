@@ -34,11 +34,16 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		// Go to left menu
 		driver.findElementByClassName( page.getProperty("imageButton")).click();
 		report.info("Tap on left menu");
-		VerificationManager.verifyString("History", driver.findElementByName("History").getText(), "Not navigate to the left menu");
+		report.info(" ");
+		Thread.sleep(2000);
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Not navigate to the left menu");
+		report.info(" ");
 		
 		// Go to Day View
-		driver.findElementByName(page.getProperty("dayViewButton")).click();
 		report.info("Tap on Day View in left side menu");
+		driver.findElementByName(page.getProperty("dayViewButton")).click();
+		report.info(" ");
+		
 		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getDateByDayView() ,"Not navigate to the Day View Screen");
 		
 		//Swipe to given date
@@ -46,12 +51,14 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		{
 			swipeObject.swipeLeftToRight(driver);
 			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
-		 }
+			report.info(" ");
+		}
 		
 		// Tap on food and medicine in history of day view page
 		WebElement medicineByHistory = driver.findElementById(page.getProperty("historyListView"));
 		medicineByHistory.findElement(By.id(page.getProperty("medicineByHistory"))).click();
 		report.info("Tap on the Food and medicine below the graph");
+		report.info(" ");
 		
         // Put all the same id's of item in list
 		MobileElement graphScrubber = driver.findElement(By.id(page.getProperty("GraphScrubberId")));
@@ -60,22 +67,26 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		// Get the medicine quntity from graph
 		String medicineQuntityByGraph = foodAndInsulinvalue.get(0).getText();
 		report.info("Get the medicine quantity from the graph: "+medicineQuntityByGraph);
+		report.info(" ");
 		
 		// Get the cabs quntity from graph
 		String foodQuntityByGraph = foodAndInsulinvalue.get(1).getText();
 		report.info("Get the carbs Quantity from graph: "+foodQuntityByGraph);
+		report.info(" ");
 		
 		// Get the Medicine quantity from history
 		driver.findElementById(page.getProperty("medicineNameIdByHistory")).getText();
 		String medicineQuntityByHistory = driver.findElementById(page.getProperty("medicineQuntityIdByHistory")).getText();
 		driver.findElementById(page.getProperty("medicineTimeIdByHistory")).getText();
 		report.info("Get the Medicine quantity from history");
+		report.info(" ");
 		
 		// Get the Food quantity from history
 		driver.findElementById(page.getProperty("foodNameIdByHistory")).getText();
 		String foodQuntityByHistory = driver.findElementById(page.getProperty("foodQuntityIdByHistory")).getText();
 		driver.findElementById(page.getProperty("foodTimeIdByHistory")).getText();
 		report.info("Get the Food quantity from history");
+		report.info(" ");
 		
 		// Cut the String to match the food and medicine Quntity
 		String medicineQuntityFromHistory = trimStringobj.trimString(medicineQuntityByHistory);
@@ -83,15 +94,18 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 
 		// Verify medicine content matches or not
 		report.info("Verifying Food and Medicine Quntity between graph and history ");
-		
+		report.info(" ");
 		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
+		report.info(" ");
 		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
 		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity not matches with graph");
 		
 	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Medicine Quantity not matches with graph");
 	    
 		report.info("Food Quantity From history: "+foodQuntityFromHistory);
+		report.info(" ");
 		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
+		report.info(" ");
 		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity not matches with graph");
 		Assert.assertTrue(foodQuntityFromHistory.equals(foodQuntityByGraph), "Food Quantity not matches with graph");
 	}
