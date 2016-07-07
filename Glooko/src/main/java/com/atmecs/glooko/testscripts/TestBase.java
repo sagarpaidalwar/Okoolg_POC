@@ -14,8 +14,8 @@ import com.atmecs.glooko.testfunction.VerifyFoodAndMedicine;
 import com.atmecs.glooko.utility.LoadPages;
 
 public class TestBase  extends UserBaseTest{
-	 protected LoadPages pageObject;
 	
+	protected LoadPages pageObject;
 	 protected Properties page;
 	 protected XlsDataProvider xls;
 	 protected Swipe swipeObject;

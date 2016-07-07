@@ -59,8 +59,8 @@ public class AddNote implements Constants{
 		 //Add time 
 		 timeDate.addTime(driver, time);
 		 report.info("Time added successfully");
-		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Incorrect time added");
-      
+		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Time Check in Quick Add Screen - Time selected in Time Picker and Time in Time Text DOESNOT match");
+		       
 		// Add Food
 		 addFoodMedicine(driver, rowNo);
 	 
@@ -95,7 +95,6 @@ public class AddNote implements Constants{
 		 */
 	    public void addNoteForCurrentDate(AppiumDriver<MobileElement> driver,int rowNo) throws IOException
 		 {
-	            report.info("Inside the addNoteCurrentDate method");    	
 			    page = pageObject.getObjectRepository("AddFood.properties");
 			
 				// Tap on add note button
@@ -153,16 +152,15 @@ public class AddNote implements Constants{
 	        // Delete medicine from from history
 			driver.findElementById(page.getProperty("medicineItemId")).click();
 			driver.findElementById(page.getProperty("deleteButton")).click();
-			Thread.sleep(WAIT_TIME);
 			
 			}
-			historyElement=driver.findElements(By.id("com.glooko.logbook:id/history_section"));
-			
+			 historyElement=driver.findElements(By.id("com.glooko.logbook:id/history_section"));
+			 
 			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(dateTime.getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
 	         report.info("Data is deleted successfully");
 		}
       
-		}
+}
 		
 		
 

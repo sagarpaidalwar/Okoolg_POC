@@ -2,16 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Value for the maxRows2]]>
-    </line>
-    <line>
       <![CDATA[PASS : Home: ACTUAL : Home 	EXPECTED :Home]]>
-    </line>
-    <line>
-      <![CDATA[Inside the for loop=========2]]>
-    </line>
-    <line>
-      <![CDATA[Inside the addNoteCurrentDate method]]>
     </line>
     <line>
       <![CDATA[Tap on the add note button]]>
@@ -81,9 +72,6 @@
     </line>
     <line>
       <![CDATA[PASS : 200: ACTUAL : 200 	EXPECTED :200]]>
-    </line>
-    <line>
-      <![CDATA[Inside the for loop=========2]]>
     </line>
     <line>
       <![CDATA[Tap on add event button]]>
@@ -197,43 +185,34 @@
       <![CDATA[Data is deleted successfully]]>
     </line>
   </reporter-output>
-  <suite name="Glooko_POC" duration-ms="145619" started-at="2016-07-05T12:43:14Z" finished-at="2016-07-05T12:45:40Z">
+  <suite name="Glooko_POC" duration-ms="139094" started-at="2016-07-05T15:21:20Z" finished-at="2016-07-05T15:23:40Z">
     <groups>
     </groups>
-    <test name="DayView" duration-ms="145619" started-at="2016-07-05T12:43:14Z" finished-at="2016-07-05T12:45:40Z">
+    <test name="DayView" duration-ms="139094" started-at="2016-07-05T15:21:20Z" finished-at="2016-07-05T15:23:40Z">
       <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeTest" is-config="true" duration-ms="195" started-at="2016-07-05T18:13:14Z" finished-at="2016-07-05T18:13:15Z">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="initializer" is-config="true" duration-ms="217" started-at="2016-07-05T20:51:20Z" finished-at="2016-07-05T20:51:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="7989" started-at="2016-07-05T18:13:15Z" finished-at="2016-07-05T18:13:23Z">
+        </test-method> <!-- initializer -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8391" started-at="2016-07-05T20:51:21Z" finished-at="2016-07-05T20:51:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="13974" started-at="2016-07-05T18:13:23Z" finished-at="2016-07-05T18:13:36Z">
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="15386" started-at="2016-07-05T20:51:29Z" finished-at="2016-07-05T20:51:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.atmecs.glooko.testscripts.AddFoodMedicine.test() throws java.lang.Exception]]>
+                <![CDATA[public void com.atmecs.glooko.testscripts.AddFoodMedicine.addFoodMedicine() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="test" duration-ms="121299" started-at="2016-07-05T18:13:36Z" finished-at="2016-07-05T18:15:38Z">
+        <test-method status="PASS" signature="addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="addFoodMedicine" duration-ms="112922" started-at="2016-07-05T20:51:44Z" finished-at="2016-07-05T20:53:37Z">
           <reporter-output>
             <line>
-              <![CDATA[Value for the maxRows2]]>
-            </line>
-            <line>
               <![CDATA[PASS : Home: ACTUAL : Home 	EXPECTED :Home]]>
-            </line>
-            <line>
-              <![CDATA[Inside the for loop=========2]]>
-            </line>
-            <line>
-              <![CDATA[Inside the addNoteCurrentDate method]]>
             </line>
             <line>
               <![CDATA[Tap on the add note button]]>
@@ -303,9 +282,6 @@
             </line>
             <line>
               <![CDATA[PASS : 200: ACTUAL : 200 	EXPECTED :200]]>
-            </line>
-            <line>
-              <![CDATA[Inside the for loop=========2]]>
             </line>
             <line>
               <![CDATA[Tap on add event button]]>
@@ -419,27 +395,27 @@
               <![CDATA[Data is deleted successfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1867" started-at="2016-07-05T18:15:38Z" finished-at="2016-07-05T18:15:40Z">
+        </test-method> <!-- addFoodMedicine -->
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="1806" started-at="2016-07-05T20:53:37Z" finished-at="2016-07-05T20:53:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.test()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=Value for the maxRows2]]]>
+                <![CDATA[[TestResult name=addFoodMedicine on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=PASS : Home: ACTUAL : Home 	EXPECTED :Home]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killServer -->
-        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="1" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
+        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="1" started-at="2016-07-05T20:53:39Z" finished-at="2016-07-05T20:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deIntializer -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="283" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="360" started-at="2016-07-05T20:53:39Z" finished-at="2016-07-05T20:53:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-05T18:15:40Z" finished-at="2016-07-05T18:15:40Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-05T20:53:40Z" finished-at="2016-07-05T20:53:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

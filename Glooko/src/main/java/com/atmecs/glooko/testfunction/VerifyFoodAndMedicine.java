@@ -44,12 +44,9 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		//Swipe to given date
 		if(swipe)
 		{
-			Thread.sleep(WAIT_TIME);
 			swipeObject.swipeLeftToRight(driver);
 			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
 		 }
-			
-		
 		
 		// Tap on food and medicine in history of day view page
 		WebElement medicineByHistory = driver.findElementById(page.getProperty("historyListView"));
@@ -90,10 +87,13 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
 		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
 		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity not matches with graph");
+		
+	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Medicine Quantity not matches with graph");
 	    
-		 report.info("Food Quantity From history: "+foodQuntityFromHistory);
+		report.info("Food Quantity From history: "+foodQuntityFromHistory);
 		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
 		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity not matches with graph");
+		Assert.assertTrue(foodQuntityFromHistory.equals(foodQuntityByGraph), "Food Quantity not matches with graph");
 	}
 	
 

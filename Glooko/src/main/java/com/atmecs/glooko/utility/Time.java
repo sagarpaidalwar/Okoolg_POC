@@ -60,6 +60,9 @@ public class Time {
 			 return previousDate;
 	}
 	
+	/*
+	 * Get the current date in the format as it is on day view screen
+	 */
 	public String getDateByDayView()
 	{
 		 cal.add(Calendar.DATE,0);
@@ -68,6 +71,10 @@ public class Time {
 		 return currentDate;
 		
 	}
+	
+	/*
+	 *  Get the previous day date in the format as it is on day view screen
+	 */
 	public String getPreviousDateByDayView() 
 	{
 		cal.add(Calendar.DATE,-1);
@@ -75,6 +82,10 @@ public class Time {
 		 String previousDate = date.format(new Date(cal.getTimeInMillis()));
 		 return previousDate;
 	}
+	
+	/*
+	 *  Get the current date in the format as it is on day history screen
+	 */
 	public String getDateByHistory()
 	{
 		 cal.add(Calendar.DATE,0);
