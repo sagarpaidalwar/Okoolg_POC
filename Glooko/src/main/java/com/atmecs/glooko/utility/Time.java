@@ -97,6 +97,14 @@ public class Time implements Constants{
 		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
 		 return currentDate;
 	}
+	
+	public String getpreviousDatebyQuikAdd()
+	{
+		 cal.add(Calendar.DATE,-1);
+		 SimpleDateFormat date = new SimpleDateFormat("EEE d MMM, yyyy");
+		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
+		 return currentDate;
+	}
 	 public void waitForVisible(By by,AppiumDriver<MobileElement> driver) throws IOException {
          
          WebDriverWait wait = new WebDriverWait(driver, ELEMENT_WAIT_TIME);

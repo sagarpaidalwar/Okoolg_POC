@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Title of Home Screen====================Home]]>
-    </line>
-    <line>
       <![CDATA[Tap on the add note button]]>
     </line>
     <line>
@@ -146,7 +143,7 @@
       <![CDATA[ ]]>
     </line>
     <line>
-      <![CDATA[Date added successfully]]>
+      <![CDATA[In Quick Add screen : Correct date selected in date picker]]>
     </line>
     <line>
       <![CDATA[ ]]>
@@ -335,20 +332,20 @@
       <![CDATA[ ]]>
     </line>
   </reporter-output>
-  <suite name="Glooko_POC" duration-ms="154890" started-at="2016-07-08T09:39:10Z" finished-at="2016-07-08T09:41:45Z">
+  <suite name="Glooko_POC" duration-ms="148058" started-at="2016-07-08T13:02:41Z" finished-at="2016-07-08T13:05:09Z">
     <groups>
     </groups>
-    <test name="DayView" duration-ms="154890" started-at="2016-07-08T09:39:10Z" finished-at="2016-07-08T09:41:45Z">
+    <test name="DayView" duration-ms="148058" started-at="2016-07-08T13:02:41Z" finished-at="2016-07-08T13:05:09Z">
       <class name="com.atmecs.glooko.testscripts.AddFoodMedicine">
-        <test-method status="PASS" signature="initializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="initializer" is-config="true" duration-ms="288" started-at="2016-07-08T15:09:10Z" finished-at="2016-07-08T15:09:10Z">
+        <test-method status="PASS" signature="initializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="initializer" is-config="true" duration-ms="294" started-at="2016-07-08T18:32:41Z" finished-at="2016-07-08T18:32:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="12779" started-at="2016-07-08T15:09:10Z" finished-at="2016-07-08T15:09:23Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="8975" started-at="2016-07-08T18:32:42Z" finished-at="2016-07-08T18:32:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="23135" started-at="2016-07-08T15:09:23Z" finished-at="2016-07-08T15:09:46Z">
+        <test-method status="PASS" signature="startApp(java.lang.reflect.Method)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="startApp" is-config="true" duration-ms="13795" started-at="2016-07-08T18:32:51Z" finished-at="2016-07-08T18:33:04Z">
           <params>
             <param index="0">
               <value>
@@ -359,11 +356,8 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="addFoodMedicine" duration-ms="115777" started-at="2016-07-08T15:09:46Z" finished-at="2016-07-08T15:11:42Z">
+        <test-method status="PASS" signature="addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="addFoodMedicine" duration-ms="122651" started-at="2016-07-08T18:33:04Z" finished-at="2016-07-08T18:35:07Z">
           <reporter-output>
-            <line>
-              <![CDATA[Title of Home Screen====================Home]]>
-            </line>
             <line>
               <![CDATA[Tap on the add note button]]>
             </line>
@@ -506,7 +500,7 @@
               <![CDATA[ ]]>
             </line>
             <line>
-              <![CDATA[Date added successfully]]>
+              <![CDATA[In Quick Add screen : Correct date selected in date picker]]>
             </line>
             <line>
               <![CDATA[ ]]>
@@ -696,26 +690,26 @@
             </line>
           </reporter-output>
         </test-method> <!-- addFoodMedicine -->
-        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="2256" started-at="2016-07-08T15:11:42Z" finished-at="2016-07-08T15:11:44Z">
+        <test-method status="PASS" signature="killServer(org.testng.ITestResult)[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="killServer" is-config="true" duration-ms="2029" started-at="2016-07-08T18:35:07Z" finished-at="2016-07-08T18:35:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addFoodMedicine on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=Title of Home Screen====================Home]]]>
+                <![CDATA[[TestResult name=addFoodMedicine on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS method=AddFoodMedicine.addFoodMedicine()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]] output=Tap on the add note button]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killServer -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="628" started-at="2016-07-08T15:11:44Z" finished-at="2016-07-08T15:11:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="0" started-at="2016-07-08T15:11:44Z" finished-at="2016-07-08T15:11:44Z">
+        <test-method status="PASS" signature="deIntializer()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="deIntializer" is-config="true" duration-ms="0" started-at="2016-07-08T18:35:09Z" finished-at="2016-07-08T18:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deIntializer -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-07-08T15:11:45Z" finished-at="2016-07-08T15:11:45Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterClass" is-config="true" duration-ms="281" started-at="2016-07-08T18:35:09Z" finished-at="2016-07-08T18:35:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:[AddFoodMedicine passed=0 failed=0 skipped=0]]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-07-08T18:35:09Z" finished-at="2016-07-08T18:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

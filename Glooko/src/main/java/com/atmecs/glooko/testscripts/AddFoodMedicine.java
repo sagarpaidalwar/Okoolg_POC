@@ -39,7 +39,6 @@ public class AddFoodMedicine extends TestBase {
 	@Test
 	public void addFoodMedicine() throws Exception {
 	
-		report.info("Title of Home Screen===================="+driver.findElementByXPath("//android.widget.TextView[@text='Home']").getText());
 		//VerificationManager.verifyString("Home", driver.findElementByName("Home").getText(), "App is not started");
 		for (int rowNo = 1; rowNo <= maxRow; rowNo++) {
 			

@@ -55,7 +55,17 @@ public class AddNote implements Constants{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		 report.info("Date added successfully");
+		 
+		 try
+		 {
+		 Assert.assertTrue(driver.findElementById(page.getProperty("noteDateText")).getText().equals(timeObject.getpreviousDatebyQuikAdd()), "");
+		 report.info("In Quick Add screen : Correct date selected in date picker");
+		 }
+		 catch(Exception e)
+		 {
+			 report.info("Date check in Quick add screen: Incorrect date selected in date picker");
+		 }
+		 
 		 report.info(" ");
 		 //Add time 
 		 timeDate.addTime(driver, time);
