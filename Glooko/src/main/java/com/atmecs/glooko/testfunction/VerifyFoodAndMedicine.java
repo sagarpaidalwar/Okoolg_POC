@@ -24,7 +24,7 @@ public class VerifyFoodAndMedicine implements Constants{
 	LoadPages pageObject = new LoadPages();
 	TrimString trimStringobj = new TrimString();
 	Swipe swipeObject=new Swipe();
-	Time dateTime=new Time();
+	Time timeObject = new Time();
 	
 	
 public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driver) throws IOException, InterruptedException {
@@ -35,7 +35,7 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		driver.findElementByClassName( page.getProperty("imageButton")).click();
 		report.info("Tap on left menu");
 		report.info(" ");
-		Thread.sleep(2000);
+		timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
 		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Not navigate to the left menu");
 		report.info(" ");
 		
@@ -43,14 +43,15 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		report.info("Tap on Day View in left side menu");
 		driver.findElementByName(page.getProperty("dayViewButton")).click();
 		report.info(" ");
-		
-		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getDateByDayView() ,"Not navigate to the Day View Screen");
+		timeObject.waitForVisible(By.xpath(page.getProperty("dateXpath")), driver);
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getDateByDayView() ,"Not navigate to the Day View Screen");
 		
 		//Swipe to given date
 		if(swipe)
 		{
 			swipeObject.swipeLeftToRight(driver);
-			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),dateTime.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
+			timeObject.waitForVisible(By.xpath(page.getProperty("dateXpath")), driver);
+			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
 			report.info(" ");
 		}
 		

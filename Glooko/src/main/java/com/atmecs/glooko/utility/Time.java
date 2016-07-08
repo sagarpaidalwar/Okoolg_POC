@@ -6,12 +6,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class Time {
+public class Time implements Constants{
 	XlsDataProvider xls;
 	LoadPages pageObject;
 	Properties page;
@@ -93,5 +97,12 @@ public class Time {
 		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
 		 return currentDate;
 	}
+	 public void waitForVisible(By by,AppiumDriver<MobileElement> driver) throws IOException {
+         
+         WebDriverWait wait = new WebDriverWait(driver, ELEMENT_WAIT_TIME);
+         
+                 wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+
+ }
 
 }

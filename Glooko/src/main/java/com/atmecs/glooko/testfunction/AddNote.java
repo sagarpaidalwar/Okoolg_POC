@@ -29,7 +29,7 @@ public class AddNote implements Constants{
 	ReportLogService report = new ReportLogServiceImpl(AddNote.class);
 	Swipe swipeObject=new Swipe();
 	List<MobileElement> historyElement;
-	Time dateTime=new Time();
+	Time timeObject = new Time();
 	
 	
 	/*
@@ -92,6 +92,7 @@ public class AddNote implements Constants{
 			driver.findElementById(page.getProperty("saveNote")).click();
 			report.info("Saving Food and Medicine");
 			report.info(" ");
+			timeObject.waitForVisible(By.xpath(page.getProperty("history")), driver);
 			VerificationManager.verifyString("History", driver.findElementByXPath(page.getProperty("history")).getText(), "App not navigate to the History screen");
 			report.info(" ");
 		}
@@ -107,6 +108,7 @@ public class AddNote implements Constants{
 				driver.findElementById(page.getProperty("addNote")).click();
 				report.info("Tap on the add note button");
 				report.info(" ");
+				timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
 				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
 				
 			   //Add Food and Medicine
@@ -124,6 +126,7 @@ public class AddNote implements Constants{
              driver.findElementById(page.getProperty("addEventButton")).click();
              report.info("Tap on add event button"); 
              report.info(" ");
+             timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
              VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
              report.info(" ");
              
@@ -140,7 +143,7 @@ public class AddNote implements Constants{
 			// Go to left menu
 			driver.findElementByClassName( page.getProperty("imageButton")).click();
 			report.info("Tap on left menu");
-			Thread.sleep(2000);
+			timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
 			report.info(" ");
 			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Not navigate to the left menu");			
 			report.info(" ");
@@ -149,8 +152,10 @@ public class AddNote implements Constants{
 			driver.findElementByName("History").click();
 			report.info("Tap on History in left menu");
 			report.info(" ");
+			timeObject.waitForVisible(By.xpath(page.getProperty("history")), driver);
 			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "Not navigate to the History Screen");
 			report.info(" ");
+			
 			for(int rowNo=1;rowNo<=maxRow;rowNo++) 
 			{
 			//Swipe Top to Bottom on history page
@@ -170,7 +175,7 @@ public class AddNote implements Constants{
 			}
 			 historyElement=driver.findElements(By.id(page.getProperty("historySection")));
 			 
-			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(dateTime.getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
+			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(timeObject .getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
 	         report.info("Data is deleted successfully");
 	         report.info(" ");
 		}
