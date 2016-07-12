@@ -188,7 +188,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'addFoodMedicine')
 data.setCell(0, 2, 'com.atmecs.glooko.testscripts.AddFoodMedicine')
-data.setCell(0, 3, 122651);
+data.setCell(0, 3, 141746);
 window.suiteTableData['Glooko_POC']= { tableData: data, tableDiv: 'times-div-Glooko_POC'}
 return data;
 }
@@ -226,22 +226,21 @@ return data;
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Tap on Day View in left side menu</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">PASS : Fri, Jul 08: ACTUAL : Fri, Jul 08 	EXPECTED :Fri, Jul 08</span>
+                <span class="reporter-method-output">PASS : Tue, Jul 12: ACTUAL : Tue, Jul 12 	EXPECTED :Tue, Jul 12</span>
+                <span class="reporter-method-output"></span>
                 <span class="reporter-method-output">Tap on the Food and medicine below the graph</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Get the medicine quantity from the graph: 200.00</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Get the carbs Quantity from graph: 200</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Get the Medicine quantity from history</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Get the Food quantity from history</span>
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Verifying Food and Medicine Quntity between graph and history </span>
+                <span class="reporter-method-output">Verifying Food and Medicine Quntity between graph and history on day View Screen</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Medicine Quantity From history: 200.00</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Medicine Quantity From Graph: 200.00</span>
+                <span class="reporter-method-output"></span>
                 <span class="reporter-method-output">PASS : 200.00: ACTUAL : 200.00 	EXPECTED :200.00</span>
                 <span class="reporter-method-output">Food Quantity From history: 200</span>
                 <span class="reporter-method-output"> </span>
@@ -252,13 +251,13 @@ return data;
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Adding for the given date</span>
+                <span class="reporter-method-output">Adding Food medicine for the Previous date</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">In Quick Add screen : Correct date selected in date picker</span>
+                <span class="reporter-method-output">FAIL : expected [Mon 11 Jul, 2016] but found [Mon, Jul 11, 2016]: ACTUAL : Mon, Jul 11, 2016 	EXPECTED :Mon 11 Jul, 2016</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Time added successfully</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">PASS : 11:45 AM: ACTUAL : 11:45 AM 	EXPECTED :11:45 AM</span>
+                <span class="reporter-method-output"></span>
                 <span class="reporter-method-output">Adding Food name Rice</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Adding; quantity of carbs 100.0</span>
@@ -275,8 +274,9 @@ return data;
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Tap on Day View in left side menu</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">PASS : Fri, Jul 08: ACTUAL : Fri, Jul 08 	EXPECTED :Fri, Jul 08</span>
-                <span class="reporter-method-output">PASS : Thu, Jul 07: ACTUAL : Thu, Jul 07 	EXPECTED :Thu, Jul 07</span>
+                <span class="reporter-method-output">PASS : Tue, Jul 12: ACTUAL : Tue, Jul 12 	EXPECTED :Tue, Jul 12</span>
+                <span class="reporter-method-output"></span>
+                <span class="reporter-method-output">PASS : Mon, Jul 11: ACTUAL : Mon, Jul 11 	EXPECTED :Mon, Jul 11</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Tap on the Food and medicine below the graph</span>
                 <span class="reporter-method-output"> </span>
@@ -284,15 +284,13 @@ return data;
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Get the carbs Quantity from graph: 100</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Get the Medicine quantity from history</span>
                 <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Get the Food quantity from history</span>
-                <span class="reporter-method-output"> </span>
-                <span class="reporter-method-output">Verifying Food and Medicine Quntity between graph and history </span>
+                <span class="reporter-method-output">Verifying Food and Medicine Quntity between graph and history on day View Screen</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Medicine Quantity From history: 100.00</span>
                 <span class="reporter-method-output"> </span>
                 <span class="reporter-method-output">Medicine Quantity From Graph: 100.00</span>
+                <span class="reporter-method-output"></span>
                 <span class="reporter-method-output">PASS : 100.00: ACTUAL : 100.00 	EXPECTED :100.00</span>
                 <span class="reporter-method-output">Food Quantity From history: 100</span>
                 <span class="reporter-method-output"> </span>
@@ -341,31 +339,31 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">299 ms</span>
+                <span class="method-start">195 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">startApp(public void com.atmecs.glooko.testscripts.AddFoodMedicine.addFoodMedicine() throws java.lang.Excepti...)</span>
-                <span class="method-start">9297 ms</span>
+                <span class="method-start">8952 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addFoodMedicine</span>
-                <span class="method-start">23092 ms</span>
+                <span class="method-start">18151 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">killServer([TestResult name=addFoodMedicine on [AddFoodMedicine passed=0 failed=0 skipped=0] status=SUCCESS met...)</span>
-                <span class="method-start">145744 ms</span>
+                <span class="method-start">159897 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">deIntializer</span>
-                <span class="method-start">147774 ms</span>
+                <span class="method-name">afterClass</span>
+                <span class="method-start">161153 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">147774 ms</span>
+                <span class="method-name">deIntializer</span>
+                <span class="method-start">161153 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">148057 ms</span>
+                <span class="method-start">161545 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

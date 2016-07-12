@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 08 18:32:41 IST 2016</td>
+<td>Started on:</td><td>Tue Jul 12 11:29:20 IST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>148 seconds (148058 ms)</td>
+<tr><td>Total time:</td><td>161 seconds (161546 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.atmecs.glooko.testscripts.AddFoodMedicine.addFoodMedicine()'><b>addFoodMedicine</b><br>Test class: com.atmecs.glooko.testscripts.AddFoodMedicine<br/>
-<a href="#Output-33918438" onClick='toggleBox("Output-33918438", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-486843245" onClick='toggleBox("Output-486843245", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-33918438" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-33918438">
+<a href="#Output-486843245" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-486843245">
 Tap on the add note button<br/>
  <br/>
 PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add<br/>
@@ -99,22 +99,21 @@ PASS : Add Event: ACTUAL : Add Event 	EXPECTED :Add Event<br/>
  <br/>
 Tap on Day View in left side menu<br/>
  <br/>
-PASS : Fri, Jul 08: ACTUAL : Fri, Jul 08 	EXPECTED :Fri, Jul 08<br/>
+PASS : Tue, Jul 12: ACTUAL : Tue, Jul 12 	EXPECTED :Tue, Jul 12<br/>
+<br/>
 Tap on the Food and medicine below the graph<br/>
  <br/>
 Get the medicine quantity from the graph: 200.00<br/>
  <br/>
 Get the carbs Quantity from graph: 200<br/>
  <br/>
-Get the Medicine quantity from history<br/>
  <br/>
-Get the Food quantity from history<br/>
- <br/>
-Verifying Food and Medicine Quntity between graph and history <br/>
+Verifying Food and Medicine Quntity between graph and history on day View Screen<br/>
  <br/>
 Medicine Quantity From history: 200.00<br/>
  <br/>
 Medicine Quantity From Graph: 200.00<br/>
+<br/>
 PASS : 200.00: ACTUAL : 200.00 	EXPECTED :200.00<br/>
 Food Quantity From history: 200<br/>
  <br/>
@@ -125,13 +124,13 @@ Tap on add event button<br/>
  <br/>
 PASS : Quick Add: ACTUAL : Quick Add 	EXPECTED :Quick Add<br/>
  <br/>
-Adding for the given date<br/>
+Adding Food medicine for the Previous date<br/>
  <br/>
-In Quick Add screen : Correct date selected in date picker<br/>
+FAIL : expected [Mon 11 Jul, 2016] but found [Mon, Jul 11, 2016]: ACTUAL : Mon, Jul 11, 2016 	EXPECTED :Mon 11 Jul, 2016<br/>
  <br/>
-Time added successfully<br/>
  <br/>
 PASS : 11:45 AM: ACTUAL : 11:45 AM 	EXPECTED :11:45 AM<br/>
+<br/>
 Adding Food name Rice<br/>
  <br/>
 Adding; quantity of carbs 100.0<br/>
@@ -148,8 +147,9 @@ PASS : Add Event: ACTUAL : Add Event 	EXPECTED :Add Event<br/>
  <br/>
 Tap on Day View in left side menu<br/>
  <br/>
-PASS : Fri, Jul 08: ACTUAL : Fri, Jul 08 	EXPECTED :Fri, Jul 08<br/>
-PASS : Thu, Jul 07: ACTUAL : Thu, Jul 07 	EXPECTED :Thu, Jul 07<br/>
+PASS : Tue, Jul 12: ACTUAL : Tue, Jul 12 	EXPECTED :Tue, Jul 12<br/>
+<br/>
+PASS : Mon, Jul 11: ACTUAL : Mon, Jul 11 	EXPECTED :Mon, Jul 11<br/>
  <br/>
 Tap on the Food and medicine below the graph<br/>
  <br/>
@@ -157,15 +157,13 @@ Get the medicine quantity from the graph: 100.00<br/>
  <br/>
 Get the carbs Quantity from graph: 100<br/>
  <br/>
-Get the Medicine quantity from history<br/>
  <br/>
-Get the Food quantity from history<br/>
- <br/>
-Verifying Food and Medicine Quntity between graph and history <br/>
+Verifying Food and Medicine Quntity between graph and history on day View Screen<br/>
  <br/>
 Medicine Quantity From history: 100.00<br/>
  <br/>
 Medicine Quantity From Graph: 100.00<br/>
+<br/>
 PASS : 100.00: ACTUAL : 100.00 	EXPECTED :100.00<br/>
 Food Quantity From history: 100<br/>
  <br/>
@@ -193,7 +191,7 @@ Data is deleted successfully<br/>
 </div>
 </td>
 <td></td>
-<td>122</td>
+<td>141</td>
 <td>[AddFoodMedicine passed=0 failed=0 skipped=0]</td></tr>
 </table><p>
 </body>

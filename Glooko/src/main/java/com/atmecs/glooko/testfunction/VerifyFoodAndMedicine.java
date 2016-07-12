@@ -36,7 +36,7 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		report.info("Tap on left menu");
 		report.info(" ");
 		timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
-		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Not navigate to the left menu");
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Failed to navigate to left menu from Home Screen");
 		report.info(" ");
 		
 		// Go to Day View
@@ -45,6 +45,7 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		report.info(" ");
 		timeObject.waitForVisible(By.xpath(page.getProperty("dateXpath")), driver);
 		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getDateByDayView() ,"Not navigate to the Day View Screen");
+		report.info("");
 		
 		//Swipe to given date
 		if(swipe)
@@ -79,36 +80,35 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		driver.findElementById(page.getProperty("medicineNameIdByHistory")).getText();
 		String medicineQuntityByHistory = driver.findElementById(page.getProperty("medicineQuntityIdByHistory")).getText();
 		driver.findElementById(page.getProperty("medicineTimeIdByHistory")).getText();
-		report.info("Get the Medicine quantity from history");
 		report.info(" ");
 		
 		// Get the Food quantity from history
 		driver.findElementById(page.getProperty("foodNameIdByHistory")).getText();
 		String foodQuntityByHistory = driver.findElementById(page.getProperty("foodQuntityIdByHistory")).getText();
 		driver.findElementById(page.getProperty("foodTimeIdByHistory")).getText();
-		report.info("Get the Food quantity from history");
-		report.info(" ");
 		
 		// Cut the String to match the food and medicine Quntity
 		String medicineQuntityFromHistory = trimStringobj.trimString(medicineQuntityByHistory);
 		String foodQuntityFromHistory = trimStringobj.trimString(foodQuntityByHistory);
 
 		// Verify medicine content matches or not
-		report.info("Verifying Food and Medicine Quntity between graph and history ");
+		report.info("");
+		report.info("Verifying Food and Medicine Quntity between graph and history on day View Screen");
 		report.info(" ");
 		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
 		report.info(" ");
 		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
-		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity not matches with graph");
+		report.info("");
+		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity does not matches with Graph Value");
 		
-	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Medicine Quantity not matches with graph");
+	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Food Quantity does not matches with Graph Value");
 	    
 		report.info("Food Quantity From history: "+foodQuntityFromHistory);
 		report.info(" ");
 		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
 		report.info(" ");
-		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity not matches with graph");
-		Assert.assertTrue(foodQuntityFromHistory.equals(foodQuntityByGraph), "Food Quantity not matches with graph");
+		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity does not matches with Graph Value");
+		Assert.assertTrue(foodQuntityFromHistory.equals(foodQuntityByGraph), "Food Quantity does not matches with Graph Value");
 	}
 	
 

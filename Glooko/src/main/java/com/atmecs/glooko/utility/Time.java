@@ -101,7 +101,8 @@ public class Time implements Constants{
 	public String getpreviousDatebyQuikAdd()
 	{
 		 cal.add(Calendar.DATE,-1);
-		 SimpleDateFormat date = new SimpleDateFormat("EEE d MMM, yyyy");
+		// SimpleDateFormat date = new SimpleDateFormat("EEE d MMM, yyyy");
+		 SimpleDateFormat date = new SimpleDateFormat("EEE dd MMM, yyyy");
 		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
 		 return currentDate;
 	}

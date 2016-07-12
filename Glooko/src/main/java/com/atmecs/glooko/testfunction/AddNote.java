@@ -41,7 +41,7 @@ public class AddNote implements Constants{
 		 Time timeDate=new Time();
 		
 		 page = pageObject.getObjectRepository("AddFood.properties");
-		 report.info("Adding for the given date");
+		 report.info("Adding Food medicine for the Previous date");
 		 report.info(" ");
 		 String time=xls.getByRow("Time", rowNo);
 
@@ -56,23 +56,14 @@ public class AddNote implements Constants{
 			e.printStackTrace();
 		}
 		 
-		 try
-		 {
-		 Assert.assertTrue(driver.findElementById(page.getProperty("noteDateText")).getText().equals(timeObject.getpreviousDatebyQuikAdd()), "");
-		 report.info("In Quick Add screen : Correct date selected in date picker");
-		 }
-		 catch(Exception e)
-		 {
-			 report.info("Date check in Quick add screen: Incorrect date selected in date picker");
-		 }
-		 
+		 VerificationManager.verifyString(driver.findElementById(page.getProperty("noteDateText")).getText(), timeObject.getpreviousDatebyQuikAdd(), "In Quick Add Screen: Date selected in date picker does not match with date in date Text");
 		 report.info(" ");
+		
 		 //Add time 
 		 timeDate.addTime(driver, time);
-		 report.info("Time added successfully");
 		 report.info(" ");
 		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Time Check in Quick Add Screen - Time selected in Time Picker and Time in Time Text DOESNOT match");
-		       
+		 report.info("");     
 		// Add Food
 		 addFoodMedicine(driver, rowNo);
 	 
@@ -119,7 +110,7 @@ public class AddNote implements Constants{
 				report.info("Tap on the add note button");
 				report.info(" ");
 				timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
-				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
+				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Failed to navigate to Quick add Page from left menu.");
 				
 			   //Add Food and Medicine
 				addFoodMedicine(driver, rowNo);
@@ -137,7 +128,7 @@ public class AddNote implements Constants{
              report.info("Tap on add event button"); 
              report.info(" ");
              timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
-             VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Not navigate to the Quick add screen ");
+             VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Failed to navigate to Quick add Page from left menu ");
              report.info(" ");
              
 		}
@@ -155,7 +146,7 @@ public class AddNote implements Constants{
 			report.info("Tap on left menu");
 			timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
 			report.info(" ");
-			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Not navigate to the left menu");			
+			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Failed to navigate to the left menu from home screen");			
 			report.info(" ");
 		
 			// Tap on history
@@ -163,7 +154,7 @@ public class AddNote implements Constants{
 			report.info("Tap on History in left menu");
 			report.info(" ");
 			timeObject.waitForVisible(By.xpath(page.getProperty("history")), driver);
-			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "Not navigate to the History Screen");
+			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "Failed to navigate to history Page from left side menu.");
 			report.info(" ");
 			
 			for(int rowNo=1;rowNo<=maxRow;rowNo++) 
