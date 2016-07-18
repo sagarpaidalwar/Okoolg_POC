@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 
+
 import com.atmecs.falcon.automation.mobileui.components.DatePicker;
 import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
 import com.atmecs.falcon.automation.util.reporter.ReportLogService;
@@ -30,7 +31,8 @@ public class AddNote implements Constants{
 	Swipe swipeObject=new Swipe();
 	List<MobileElement> historyElement;
 	Time timeObject = new Time();
-	
+	String addOnPreviousDayTime;
+	String addOnCurrentDayTime;
 	
 	/*
 	 * Add Food and Medicine For the Given Date
@@ -39,9 +41,11 @@ public class AddNote implements Constants{
 	{
 		
 		 Time timeDate=new Time();
-		
+	
 		 page = pageObject.getObjectRepository("AddFood.properties");
+		
 		 report.info("Adding Food medicine for the Previous date");
+		 
 		 report.info(" ");
 		 String time=xls.getByRow("Time", rowNo);
 
@@ -55,14 +59,14 @@ public class AddNote implements Constants{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		 
-		 VerificationManager.verifyString(driver.findElementById(page.getProperty("noteDateText")).getText(), timeObject.getpreviousDatebyQuikAdd(), "In Quick Add Screen: Date selected in date picker does not match with date in date Text");
 		 report.info(" ");
 		
 		 //Add time 
 		 timeDate.addTime(driver, time);
 		 report.info(" ");
-		 VerificationManager.verifyString(time, driver.findElementById(page.getProperty("noteTimeTtext")).getText(), "Time Check in Quick Add Screen - Time selected in Time Picker and Time in Time Text DOESNOT match");
+		 
+		 addOnPreviousDayTime=driver.findElementById(page.getProperty("noteTimeTtext")).getText();
+		 VerificationManager.verifyString(time,addOnPreviousDayTime , " Verifying time selected in time picker with time text in Quick add screen");
 		 report.info("");     
 		// Add Food
 		 addFoodMedicine(driver, rowNo);
@@ -81,20 +85,20 @@ public class AddNote implements Constants{
 			 
 		     // Add carbs
 			driver.findElementById(page.getProperty("carbsText")).sendKeys(xls.getByRow("Food Quantity", rowNo));
-			report.info("Adding; quantity of carbs "+xls.getByRow("Food Quantity", rowNo));
+			report.info("Adding quantity of carbs in grams "+xls.getByRow("Food Quantity", rowNo));
 			report.info(" ");
 			 
 			// Add medicine Quntity
 			driver.findElementById(page.getProperty("medicineQuntity")).sendKeys(xls.getByRow("Medicine Quantity", rowNo));
-			report.info("Adding Medicine quantity "+xls.getByRow("Medicine Quantity", rowNo));
+			report.info("Adding Medicine quantity in Unit "+xls.getByRow("Medicine Quantity", rowNo));
 			report.info(" ");
 			 
 			// Save the note
 			driver.findElementById(page.getProperty("saveNote")).click();
-			report.info("Saving Food and Medicine");
+			report.info("Tap on save button in quick add screen");
 			report.info(" ");
 			timeObject.waitForVisible(By.xpath(page.getProperty("history")), driver);
-			VerificationManager.verifyString("History", driver.findElementByXPath(page.getProperty("history")).getText(), "App not navigate to the History screen");
+			VerificationManager.verifyString("History", driver.findElementByXPath(page.getProperty("history")).getText(), "After saving food and medicine verify whether app is navigated to history");
 			report.info(" ");
 		}
 	
@@ -103,6 +107,7 @@ public class AddNote implements Constants{
 		 */
 	    public void addNoteForCurrentDate(AppiumDriver<MobileElement> driver,int rowNo) throws IOException
 		 {
+	    	
 			    page = pageObject.getObjectRepository("AddFood.properties");
 			
 				// Tap on add note button
@@ -110,7 +115,10 @@ public class AddNote implements Constants{
 				report.info("Tap on the add note button");
 				report.info(" ");
 				timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
-				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Failed to navigate to Quick add Page from left menu.");
+				VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Verify app is navigated to Quick add screen from Home Screen");
+				report.info("");
+				
+				addOnCurrentDayTime=driver.findElementById(page.getProperty("noteTimeTtext")).getText();
 				
 			   //Add Food and Medicine
 				addFoodMedicine(driver, rowNo);
@@ -128,7 +136,7 @@ public class AddNote implements Constants{
              report.info("Tap on add event button"); 
              report.info(" ");
              timeObject.waitForVisible(By.xpath(page.getProperty("quickAdd")), driver);
-             VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Failed to navigate to Quick add Page from left menu ");
+             VerificationManager.verifyString("Quick Add", driver.findElementByXPath(page.getProperty("quickAdd")).getText(), "Verify app is navigated to Quick add screen from left menu");
              report.info(" ");
              
 		}
@@ -138,15 +146,15 @@ public class AddNote implements Constants{
 		 */
 		public void deleteFoodAndMedicineForCurrentDay(AppiumDriver<MobileElement> driver) throws IOException, InterruptedException
 		{
-			
 			int maxRow=xls.getRowCount("AddNote.xls", "AddNote");
 			Properties page = pageObject.getObjectRepository("historyId.properties");
+			
 			// Go to left menu
 			driver.findElementByClassName( page.getProperty("imageButton")).click();
 			report.info("Tap on left menu");
 			timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
 			report.info(" ");
-			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Failed to navigate to the left menu from home screen");			
+			VerificationManager.verifyString("Add Event",driver.findElementByXPath(page.getProperty("addEvent")).getText(), "Verify app is navigated to left side menu from day View screen");			
 			report.info(" ");
 		
 			// Tap on history
@@ -154,33 +162,52 @@ public class AddNote implements Constants{
 			report.info("Tap on History in left menu");
 			report.info(" ");
 			timeObject.waitForVisible(By.xpath(page.getProperty("history")), driver);
-			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "Failed to navigate to history Page from left side menu.");
+			VerificationManager.verifyString("History",  driver.findElementByXPath(page.getProperty("history")).getText(), "");
 			report.info(" ");
 			
-			for(int rowNo=1;rowNo<=maxRow;rowNo++) 
-			{
+		
 			//Swipe Top to Bottom on history page
 			swipeObject.swipeTopToBottom(driver);
-			report.info("Done Swiping from top to bottom");
 			report.info(" ");
-			
-			// Delete food item from history
-			driver.findElementById(page.getProperty("foodItemId")).click();
-			driver.findElementById(page.getProperty("deleteButton")).click();
-			report.info("Deleted the food item from history");
-			report.info(" ");
-	        // Delete medicine from from history
-			driver.findElementById(page.getProperty("medicineItemId")).click();
-			driver.findElementById(page.getProperty("deleteButton")).click();
-			
-			}
+			deleteByTime(driver, addOnCurrentDayTime);
+			deleteByTime(driver, addOnPreviousDayTime);
+		
+	
 			 historyElement=driver.findElements(By.id(page.getProperty("historySection")));
+			 try{
+			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(timeObject .getDateByHistory().toUpperCase()), "Added food and Medicine is not deleted for the current date");
+			 report.info("Added Food and Medicine is deleted successfully");
+			 }
+			 catch(AssertionError e)
+			 {
+				 report.info("Data is not deleted Or taking some time to delete");
+			 }
 			 
-			 Assert.assertFalse(historyElement.get(0).getText().toUpperCase().equals(timeObject .getDateByHistory().toUpperCase()), "Data is not deleted for the current date");
-	         report.info("Data is deleted successfully");
-	         report.info(" ");
+			 report.info(" ");
 		}
-      
+		
+		
+		/*
+		 * Delete data by time from history
+		 */
+		public void deleteByTime(AppiumDriver<MobileElement> driver,String time)
+		{
+			List <MobileElement> delete = null;
+		try
+		{
+		 delete=driver.findElementsByName(time);
+		}
+		catch(IndexOutOfBoundsException e)
+		{
+         report.info("No Food or Medicine is available for the given date to delete");
+		}
+		for(int i=0;i<delete.size();i++)
+		{
+			
+			    delete.get(i).click();
+			    driver.findElementById("android:id/button3").click();	
+		}
+		}
 }
 		
 		

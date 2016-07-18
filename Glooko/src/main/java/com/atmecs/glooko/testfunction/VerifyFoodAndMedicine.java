@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.atmecs.falcon.automation.mobileui.dataprovider.XlsDataProvider;
 import com.atmecs.falcon.automation.util.reporter.ReportLogService;
 import com.atmecs.falcon.automation.util.reporter.ReportLogServiceImpl;
 import com.atmecs.falcon.automation.verifyresult.VerificationManager;
@@ -25,18 +26,19 @@ public class VerifyFoodAndMedicine implements Constants{
 	TrimString trimStringobj = new TrimString();
 	Swipe swipeObject=new Swipe();
 	Time timeObject = new Time();
+	XlsDataProvider xls=new XlsDataProvider("AddNote.xls","AddNote");
 	
-	
-public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driver) throws IOException, InterruptedException {
+public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driver,int rowNo) throws IOException, InterruptedException {
 		
 		
 		Properties page = pageObject.getObjectRepository("dayViewId.properties");
+		
 		// Go to left menu
 		driver.findElementByClassName( page.getProperty("imageButton")).click();
 		report.info("Tap on left menu");
 		report.info(" ");
 		timeObject.waitForVisible(By.xpath(page.getProperty("addEvent")), driver);
-		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Failed to navigate to left menu from Home Screen");
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("addEvent")).getText(),"Add Event", "Verify app is navigated to left menu from History Screen");
 		report.info(" ");
 		
 		// Go to Day View
@@ -44,7 +46,7 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		driver.findElementByName(page.getProperty("dayViewButton")).click();
 		report.info(" ");
 		timeObject.waitForVisible(By.xpath(page.getProperty("dateXpath")), driver);
-		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getDateByDayView() ,"Not navigate to the Day View Screen");
+		VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getDateByDayView() ,"Verify app is navigated to the Day View Screen from left menu");
 		report.info("");
 		
 		//Swipe to given date
@@ -52,7 +54,7 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		{
 			swipeObject.swipeLeftToRight(driver);
 			timeObject.waitForVisible(By.xpath(page.getProperty("dateXpath")), driver);
-			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getPreviousDateByDayView() ,"Not navigate to the Previous Day View Screen");
+			VerificationManager.verifyString(driver.findElementByXPath(page.getProperty("dateXpath")).getText(),timeObject.getPreviousDateByDayView() ,"Verify app is navigated to the Previous Day View Screen from the current Day View Screen");
 			report.info(" ");
 		}
 		
@@ -68,19 +70,18 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 
 		// Get the medicine quntity from graph
 		String medicineQuntityByGraph = foodAndInsulinvalue.get(0).getText();
-		report.info("Get the medicine quantity from the graph: "+medicineQuntityByGraph);
+		report.info("Get the medicine quantity from the graph in Unit: "+medicineQuntityByGraph);
 		report.info(" ");
 		
 		// Get the cabs quntity from graph
 		String foodQuntityByGraph = foodAndInsulinvalue.get(1).getText();
-		report.info("Get the carbs Quantity from graph: "+foodQuntityByGraph);
+		report.info("Get the carbs Quantity from graph in grams: "+foodQuntityByGraph);
 		report.info(" ");
 		
 		// Get the Medicine quantity from history
 		driver.findElementById(page.getProperty("medicineNameIdByHistory")).getText();
 		String medicineQuntityByHistory = driver.findElementById(page.getProperty("medicineQuntityIdByHistory")).getText();
 		driver.findElementById(page.getProperty("medicineTimeIdByHistory")).getText();
-		report.info(" ");
 		
 		// Get the Food quantity from history
 		driver.findElementById(page.getProperty("foodNameIdByHistory")).getText();
@@ -92,23 +93,21 @@ public void verifyFoodAndMedicine(boolean swipe,AppiumDriver<MobileElement> driv
 		String foodQuntityFromHistory = trimStringobj.trimString(foodQuntityByHistory);
 
 		// Verify medicine content matches or not
-		report.info("");
-		report.info("Verifying Food and Medicine Quntity between graph and history on day View Screen");
+		report.info("Verifying Food and Medicine Quntity between graph and List on day View Screen");
 		report.info(" ");
-		report.info("Medicine Quantity From history: "+medicineQuntityFromHistory);
+		report.info("Medicine Quantity From List on Day View Screen: "+medicineQuntityFromHistory);
 		report.info(" ");
-		report.info("Medicine Quantity From Graph: "+medicineQuntityByGraph);
+		report.info("Medicine Quantity From Graph on Day View Screen : "+medicineQuntityByGraph);
 		report.info("");
-		VerificationManager.verifyString(medicineQuntityFromHistory, medicineQuntityByGraph, "Medicine Quantity does not matches with Graph Value");
 		
-	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Food Quantity does not matches with Graph Value");
+	    Assert.assertTrue(medicineQuntityFromHistory.equals(medicineQuntityByGraph), "Medicine Quantity does not matches with Graph Value");
 	    
-		report.info("Food Quantity From history: "+foodQuntityFromHistory);
+		report.info("Food Quantity From List on Day View Screen: "+foodQuntityFromHistory);
 		report.info(" ");
-		report.info("Food Quantity From Graph: "+foodQuntityByGraph);
+		report.info("Food Quantity From Graph on Day View Screen: "+foodQuntityByGraph);
 		report.info(" ");
-		VerificationManager.verifyString( foodQuntityFromHistory, foodQuntityByGraph,"Food Quantity does not matches with Graph Value");
 		Assert.assertTrue(foodQuntityFromHistory.equals(foodQuntityByGraph), "Food Quantity does not matches with Graph Value");
+	
 	}
 	
 

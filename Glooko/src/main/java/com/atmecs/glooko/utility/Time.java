@@ -39,13 +39,15 @@ public class Time implements Constants{
 	         //String label = timeParts[2];
 	          
 	         driver.findElementById(page.getProperty("noteTimeTtext")).click();
-	         driver.findElementById(page.getProperty("hour")).sendKeys(hour);
-	         driver.findElementById(page.getProperty("minute")).sendKeys(minute);
-	 		
+	        // driver.findElementById(page.getProperty("hour")).sendKeys(hour);
+	         //driver.findElementById(page.getProperty("minute")).sendKeys(minute);
+	         driver.findElementByAccessibilityId(hour).click();
+             driver.findElementByAccessibilityId(minute).click();
+             
 	 		if(label.equalsIgnoreCase("AM"))
-	 			driver.findElementById(page.getProperty("amLabel")).sendKeys(label);
+	 			driver.findElementById(page.getProperty("amLabel")).click();
 	 		if(label.equalsIgnoreCase("PM"))
-	 			driver.findElementById(page.getProperty("pmLabel")).sendKeys(label);	
+	 			driver.findElementById(page.getProperty("pmLabel")).click();	
 	 		
 	 		driver.findElementById(page.getProperty("okButton")).click();
 	}
@@ -102,7 +104,7 @@ public class Time implements Constants{
 	{
 		 cal.add(Calendar.DATE,-1);
 		// SimpleDateFormat date = new SimpleDateFormat("EEE d MMM, yyyy");
-		 SimpleDateFormat date = new SimpleDateFormat("EEE dd MMM, yyyy");
+		 SimpleDateFormat date = new SimpleDateFormat("EEE, MMM dd, yyyy");
 		 String currentDate = date.format(new Date(cal.getTimeInMillis()));
 		 return currentDate;
 	}

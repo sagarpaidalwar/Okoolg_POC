@@ -3,7 +3,9 @@
 <suite name="Glooko_POC" verbose="1" >
 <test name="DayView" >
 <classes>
-<class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/>
+ <class name="com.atmecs.glooko.testscripts.AddFoodMedicine"/> 
+<!-- <class name="com.atmecs.glooko.testscripts.TestDeleteByTime"/> -->
+
 </classes>
 </test>
 </suite>

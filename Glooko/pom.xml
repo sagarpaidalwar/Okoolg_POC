@@ -92,7 +92,7 @@
 				<dependency>
 					<groupId>com.atmecs.falcon.automation</groupId>
 					<artifactId>falcon-commons</artifactId>
-					<version>1.0.RELEASE</version>
+					<version>1.1.RELEASE</version>
 				</dependency>
 			</dependencies>
 		</profile>
